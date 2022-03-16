@@ -1,46 +1,39 @@
 .b{
     margin: 0px;
-    height: 1296px;
+    height: 100%;
 }
 
 .background{
     background-color: rgb(4, 13, 34);
-    width: 100%;
-    height: 100%;
-    padding: 0px;
-    position: relative;
-}
-
-.backglow1{
     background-image: url('../source/glow1.svg');
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
-    background-position: -400px -230px;
+    padding: 15px;
+    background-position: -600px -350px;
     position: absolute;
+    z-index: -1;
 }
 
 .cabeçalho{
-    width: 1904px;
+    width: 100%;
     height: 56px;
     display: flex;
     z-index: 100;
 }
 
-.topmenuright{
-    height: 56px;
+.topmenuleft{
     display: flex;
     flex-flow: row wrap;
-    align-items: center;
     flex-grow: 2;
+    align-items: center;
 }
 
 .blankspace{
     flex-grow: 1;
 }
 
-.topmenuleft{  
-    height: 56px;
+.topmenuright{
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -48,47 +41,83 @@
 }
 
 .topmenulogo{
-    position:absolute;
+    position:relative;
     display:inline-block;
-    vertical-align:top;
     width: 32px;
-    height: 56px;
-    margin-top: 30px;
+    vertical-align: middle;
     flex-grow: 1;
 }
 
 .menuitem{
-    color: white;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: auto;
+}
+
+.menuitem :hover{
+    color: #8193B2;
+    flex-grow: 1;
+}
+
+.menuitemFix{
     padding-right: 30px;
     flex-grow: 1;
 }
 
 .menuitemHover1{ /*adicionar opções de hover e seletor*/
-    color: white;
+    padding-right: 30px;
     flex-grow: 1;
 }
 
 .menuitemHover2{
-    color: white;
+    padding-right: 30px;
     flex-grow: 1;
 }
 
 .menuitemHover3{
-    color: white;
+    padding-right: 30px;
     flex-grow: 1;
 }
 
 .searchbox{
-    color: white;
     flex-grow: 1;
 }
 
 .signin{
-    color: white;
     flex-grow: 1;
 }
 
 .signup{
-    color: white;
     flex-grow: 1;
+}
+
+.main_body{
+    display: flex;
+}
+
+.email_signup{
+    display: flex;
+}
+
+p {
+    height: 50%;
+    width: 60%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+h1 {
+    height: 40%;
+    width: 45%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 72px;
+    font-style: bold;
+    color: white;
+}
+
+.subtitle {
+    color: #8193B2;
+    font-size: 28px;
+    width: 50%;
 }
