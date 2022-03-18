@@ -18,10 +18,8 @@
 
 .backglobe{
     position: absolute;
-    right: 20%;
-    top: 10%;
-    height: 900px;
-    width: 900px;
+    left: 50%;
+    top: 15%;
     object-fit: cover;
     overflow: hidden;
     z-index: -1;
@@ -107,11 +105,12 @@
 
 /* Submenus */
 .submenu1{ /* Submenu Explore */
+    padding: 10px;
     position: absolute;
     display: none;
     background-color: #fff;
-    width: 300px;
-    height: fit-content;
+    width: 200px;
+    height: auto;
     z-index: 3;
     align-items: left;
     list-style-type: none;
@@ -119,10 +118,11 @@
 }
 
 .submenu2{ /* Submenu Explore */
+    padding: 10px;
     position: absolute;
     display: none;
     background-color: #fff;
-    width: 300px;
+    width: 200px;
     height: fit-content;
     z-index: 3;
     align-items: left;
@@ -131,13 +131,15 @@
 }
 
 .submenu3{ /* Submenu Pricing */
+    padding: 10px;
     position: absolute;
     display: none;
     background-color: #fff;
-    width: 300px;
+    width: 200px;
     height: fit-content;
     z-index: 3;
     align-items: left;
+    vertical-align: auto;
     list-style-type: none;
     border-radius: 10px;
 }
