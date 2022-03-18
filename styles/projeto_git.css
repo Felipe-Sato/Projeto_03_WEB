@@ -1,3 +1,4 @@
+/* Background */
 .b{
     margin: 0px;
     height: 100%;
@@ -15,6 +16,18 @@
     z-index: -1;
 }
 
+.backglobe{
+    position: absolute;
+    right: 20%;
+    top: 10%;
+    height: 900px;
+    width: 900px;
+    object-fit: cover;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* Cabeçalho */
 .cabeçalho{
     width: 100%;
     height: 56px;
@@ -22,22 +35,12 @@
     z-index: 100;
 }
 
+/* Cabeçalho Esquerdo */
 .topmenuleft{
     display: flex;
     flex-flow: row wrap;
     flex-grow: 2;
     align-items: center;
-}
-
-.blankspace{
-    flex-grow: 1;
-}
-
-.topmenuright{
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    flex-grow: 2;
 }
 
 .topmenulogo{
@@ -48,127 +51,247 @@
     flex-grow: 1;
 }
 
+/* Menus Estáticos */
 .menuitem{
     display: flex;
     flex-flow: row wrap;
     justify-content: auto;
 }
 
-.menuitem :hover{
+.menuitemStatic{
+    padding-right: 30px;
+    flex-grow: 1;
+}
+
+.menuitemStatic :hover {
     color: #8193B2;
-    flex-grow: 1;
 }
 
-.menuitemFix{
-    padding-right: 30px;
-    flex-grow: 1;
-}
-
-.menuitemHover1{
+/* Menus Dinâmicos */
+.menuitemHover1{ /* Products */
     padding-right: 30px;
     flex-grow: 1;
     z-index: 3;
 }
 
-.submenu1{
-    position: absolute;
-    display: none;
-    background-color: white;
-    width: 300px;
-    height: 430px;
-    z-index: 3;
-    align-items: left;
-    list-style-type: none;
-    border-radius: 10px;
-}
-
-.submenu2{
-    position: absolute;
-    display: none;
-    background-color: white;
-    width: 300px;
-    height: 500px;
-    z-index: 3;
-    align-items: left;
-    list-style-type: none;
-    border-radius: 10px;
-}
-
-.submenu3{
-    position: absolute;
-    display: none;
-    background-color: white;
-    width: 300px;
-    height: 180px;
-    z-index: 3;
-    align-items: left;
-    list-style-type: none;
-    border-radius: 10px;
-}
-
-.submenuItem1{
-    color:black;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 7px;
-}
-
-.submenuItem2{
-    color:gray;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 7px;
+.menuitemHover1:hover{
+    color: #8193B2;
 }
 
 .menuitemHover1:hover .submenu1{
+    color: #8193B2;
     display: block;
 }
 
-.menuitemHover2{
+.menuitemHover2{ /* Explore */
     padding-right: 30px;
     flex-grow: 1;
     z-index: 3;
 }
 
 .menuitemHover2:hover .submenu2{
+    color: #8193B2;
     display: block;
 }
 
-.menuitemHover3{
+.menuitemHover3{ /* Pricing */
     padding-right: 30px;
     flex-grow: 1;
     z-index: 3;
 }
 
 .menuitemHover3:hover .submenu3{
+    color: #8193B2;
     display: block;
 }
 
+/* Submenus */
+.submenu1{ /* Submenu Explore */
+    position: absolute;
+    display: none;
+    background-color: #fff;
+    width: 300px;
+    height: fit-content;
+    z-index: 3;
+    align-items: left;
+    list-style-type: none;
+    border-radius: 10px;
+}
+
+.submenu2{ /* Submenu Explore */
+    position: absolute;
+    display: none;
+    background-color: #fff;
+    width: 300px;
+    height: fit-content;
+    z-index: 3;
+    align-items: left;
+    list-style-type: none;
+    border-radius: 10px;
+}
+
+.submenu3{ /* Submenu Pricing */
+    position: absolute;
+    display: none;
+    background-color: #fff;
+    width: 300px;
+    height: fit-content;
+    z-index: 3;
+    align-items: left;
+    list-style-type: none;
+    border-radius: 10px;
+}
+
+.submenutitle{
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 7px;
+}
+
+.submenuitem{
+    color:#8193B2;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 7px;
+}
+
+/* Ícone */
+.arrow1{
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    right: 23px;
+    top: 23px;
+    color: #fff;
+}
+
+.arrow1:hover .submenu1{
+    display: block;
+    color: #8193B2;
+}
+
+.arrow2{
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    right: -27px;
+    top: 11px;
+    color: #fff;
+}
+
+.arrow2:hover .submenu2{
+    display: block;
+    color: #8193B2;
+}
+
+.arrow3{
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    right: -222px;
+    top: 11px;
+    color: #fff;
+}
+
+.arrow3:hover .submenu3{
+    display: block;
+    color: #8193B2;
+}
+
+/* Buffer Central */
+.blankspace{
+    flex-grow: 1;
+}
+
+/* Cabeçalho Direito */
+.topmenuright{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    flex-grow: 2;
+}
 
 .searchbox{
+    font-size: 16px;
+    font-style: bold;
+    height: 32px;
+    width: 100px;
+    border: #8193B2;
+    background-color: #fff;
+    border-radius: 10px;
     flex-grow: 1;
 }
 
 .signin{
+
     flex-grow: 1;
 }
 
+.signin:hover{
+    color: #8193B2;
+}
 .signup{
-    flex-grow: 1;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    border: 3px solid #fff;
+    border-radius: 0.375rem;
+    flex-grow: 1;    
 }
 
+/* Wrapper */
 .main_body{
     display: flex;
 }
 
 .email_signup{
+    width: 60%;
     display: flex;
 }
 
+.signupbox {
+    padding-top: 30px;
+    display: flex;
+    flex-flow: row;
+    width: 60%;
+}
+
+.emailbox {
+    padding: 16px 24px;
+    font-size: 16px;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 24px;
+    height: auto;
+    min-width: 60%;
+    background-color: #fff;
+    color: #8193B2;
+    border: 1px;
+    border-radius: 10px;
+    flex-grow: 3;
+}
+
+.signup2 {
+    margin-left: 10px;
+    padding: 16px 24px;
+    font-size: 18px;
+    text-align: center;
+    vertical-align: middle;
+    width: auto;
+    background-color: #2ea44f;
+    color: #fff;
+    border: 0;
+    border-radius: 10px;
+    flex-grow: 1;
+    transition: box-shadow .2s;
+}
+
 p {
+    margin: 0%;
     height: 50%;
     width: 60%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    color: white;
+    color: #fff;
 }
 
 h1 {
@@ -177,53 +300,13 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 72px;
     font-style: bold;
-    color: white;
+    color: #fff;
 }
 
 .subtitle {
-    color: #8193B2;
+    color: #fff;
     font-size: 28px;
     width: 50%;
 }
 
 
-#globepos{
-    position: absolute;
-    left: 800px;
-    top: -90px;
-    height: 1300px;
-    width: 1300px;
-    z-index: 1;
-}
-.arrow1{
-    position: absolute;
-    right: 230px;
-    top: 11px;
-    color: grey;
-}
-
-.arrow1:hover .submenu1{
-    display: block;
-}
-
-.arrow2{
-    position: absolute;
-    right: -27px;
-    top: 11px;
-    color: grey;
-}
-
-.arrow2:hover .submenu2{
-    display: block;
-}
-
-.arrow3{
-    position: absolute;
-    right: -222px;
-    top: 11px;
-    color: grey;
-}
-
-.arrow3:hover .submenu3{
-    display: block;
-}
