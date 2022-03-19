@@ -1,4 +1,3 @@
-/* Background */
 .b{
     margin: 0px;
     height: 100%;
@@ -10,22 +9,11 @@
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
-    padding: 15px;
     background-position: -600px -350px;
     position: absolute;
     z-index: -1;
 }
 
-.backglobe{
-    position: absolute;
-    left: 50%;
-    top: 15%;
-    object-fit: cover;
-    overflow: hidden;
-    z-index: -1;
-}
-
-/* Cabeçalho */
 .cabeçalho{
     width: 100%;
     height: 56px;
@@ -33,7 +21,6 @@
     z-index: 100;
 }
 
-/* Cabeçalho Esquerdo */
 .topmenuleft{
     display: flex;
     flex-flow: row wrap;
@@ -41,170 +28,10 @@
     align-items: center;
 }
 
-.topmenulogo{
-    position:relative;
-    display:inline-block;
-    width: 32px;
-    vertical-align: middle;
-    flex-grow: 1;
-}
-
-/* Menus Estáticos */
-.menuitem{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: auto;
-}
-
-.menuitemStatic{
-    padding-right: 30px;
-    flex-grow: 1;
-}
-
-.menuitemStatic :hover {
-    color: #8193B2;
-}
-
-/* Menus Dinâmicos */
-.menuitemHover1{ /* Products */
-    padding-right: 30px;
-    flex-grow: 1;
-    z-index: 3;
-}
-
-.menuitemHover1:hover{
-    color: #8193B2;
-}
-
-.menuitemHover1:hover .submenu1{
-    color: #8193B2;
-    display: block;
-}
-
-.menuitemHover2{ /* Explore */
-    padding-right: 30px;
-    flex-grow: 1;
-    z-index: 3;
-}
-
-.menuitemHover2:hover .submenu2{
-    color: #8193B2;
-    display: block;
-}
-
-.menuitemHover3{ /* Pricing */
-    padding-right: 30px;
-    flex-grow: 1;
-    z-index: 3;
-}
-
-.menuitemHover3:hover .submenu3{
-    color: #8193B2;
-    display: block;
-}
-
-/* Submenus */
-.submenu1{ /* Submenu Explore */
-    padding: 10px;
-    position: absolute;
-    display: none;
-    background-color: #fff;
-    width: 200px;
-    height: auto;
-    z-index: 3;
-    align-items: left;
-    list-style-type: none;
-    border-radius: 10px;
-}
-
-.submenu2{ /* Submenu Explore */
-    padding: 10px;
-    position: absolute;
-    display: none;
-    background-color: #fff;
-    width: 200px;
-    height: fit-content;
-    z-index: 3;
-    align-items: left;
-    list-style-type: none;
-    border-radius: 10px;
-}
-
-.submenu3{ /* Submenu Pricing */
-    padding: 10px;
-    position: absolute;
-    display: none;
-    background-color: #fff;
-    width: 200px;
-    height: fit-content;
-    z-index: 3;
-    align-items: left;
-    vertical-align: auto;
-    list-style-type: none;
-    border-radius: 10px;
-}
-
-.submenutitle{
-    color:black;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 7px;
-}
-
-.submenuitem{
-    color:#8193B2;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 7px;
-}
-
-/* Ícone */
-.arrow1{
-    height: 10px;
-    width: 10px;
-    position: absolute;
-    right: 23px;
-    top: 23px;
-    color: #fff;
-}
-
-.arrow1:hover .submenu1{
-    display: block;
-    color: #8193B2;
-}
-
-.arrow2{
-    height: 10px;
-    width: 10px;
-    position: absolute;
-    right: -27px;
-    top: 11px;
-    color: #fff;
-}
-
-.arrow2:hover .submenu2{
-    display: block;
-    color: #8193B2;
-}
-
-.arrow3{
-    height: 10px;
-    width: 10px;
-    position: absolute;
-    right: -222px;
-    top: 11px;
-    color: #fff;
-}
-
-.arrow3:hover .submenu3{
-    display: block;
-    color: #8193B2;
-}
-
-/* Buffer Central */
 .blankspace{
     flex-grow: 1;
 }
 
-/* Cabeçalho Direito */
 .topmenuright{
     display: flex;
     flex-flow: row wrap;
@@ -212,103 +39,289 @@
     flex-grow: 2;
 }
 
-.searchbox{
-    font-size: 16px;
-    font-style: bold;
-    height: 32px;
-    width: 100px;
-    border: #8193B2;
-    background-color: #fff;
-    border-radius: 10px;
+.topmenulogo{
+    position:relative;
+    left: 332px;
+    top: 9px;
+    display:inline-block;
+    width: 32px;
+    vertical-align: middle;
     flex-grow: 1;
+}
+
+.menuitem{
+    display: flex;
+    position: relative;
+    right: 80px;
+    top: 9px;
+    flex-flow: row wrap;
+    justify-content: auto;
+}
+
+.menuitem :hover{
+    color: #8193B2;
+    flex-grow: 1;
+}
+
+.menuitemFix{
+    padding-right: 30px;
+    flex-grow: 1;
+}
+
+.menuitemHover1{
+    padding-right: 30px;
+    flex-grow: 1;
+    z-index: 3;
+}
+
+.submenu1{
+    position: absolute;
+    display: none;
+    background-color: white;
+    width: 300px;
+    height: 430px;
+    z-index: 3;
+    align-items: left;
+    list-style-type: none;
+    border-radius: 10px;
+}
+
+.submenu2{
+    position: absolute;
+    display: none;
+    background-color: white;
+    width: 300px;
+    height: 500px;
+    z-index: 3;
+    align-items: left;
+    list-style-type: none;
+    border-radius: 10px;
+}
+
+.submenu3{
+    position: absolute;
+    display: none;
+    background-color: white;
+    width: 300px;
+    height: 180px;
+    z-index: 3;
+    align-items: left;
+    list-style-type: none;
+    border-radius: 10px;
+}
+
+.submenuItem1{
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 7px;
+}
+
+.submenuItem2{
+    color:gray;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 7px;
+}
+
+.menuitemHover1:hover .submenu1{
+    display: block;
+}
+
+.menuitemHover2{
+    padding-right: 30px;
+    flex-grow: 1;
+    z-index: 3;
+}
+
+.menuitemHover2:hover .submenu2{
+    display: block;
+}
+
+.menuitemHover3{
+    padding-right: 30px;
+    flex-grow: 1;
+    z-index: 3;
+}
+
+.menuitemHover3:hover .submenu3{
+    display: block;
+}
+
+p{
+    height: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+h1 {
+    position: relative;
+    top: 160px;
+    left: 300px;
+    height: 40%;
+    width: 35%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 72px;
+    font-style: bold;
+    color: white;
+}
+
+.searchbox{
+    position: relative;
+    top: -4px;
+    background-color: transparent;
+    color: white;
+    height: 30px;
+    width: 200px;
+    border-radius: 7px;
 }
 
 .signin{
-
+    position: relative;
+    width: 50px;
     flex-grow: 1;
 }
 
-.signin:hover{
-    color: #8193B2;
-}
 .signup{
-    color: #fff;
-    text-align: center;
-    vertical-align: middle;
-    border: 3px solid #fff;
-    border-radius: 0.375rem;
-    flex-grow: 1;    
+    position: relative;
+    right: 200px;
+    flex-grow: 1;
+    border: 1px ridge;
+    border-radius: 7px;
+    margin: 0;
+    width: 10px;
+    margin-block-end: 0;
 }
 
-/* Wrapper */
 .main_body{
     display: flex;
 }
 
 .email_signup{
-    width: 60%;
     display: flex;
 }
 
-.signupbox {
-    padding-top: 30px;
-    display: flex;
-    flex-flow: row;
-    width: 60%;
-}
 
-.emailbox {
-    padding: 16px 24px;
-    font-size: 16px;
-    text-align: left;
-    vertical-align: middle;
-    line-height: 24px;
-    height: auto;
-    min-width: 60%;
-    background-color: #fff;
-    color: #8193B2;
-    border: 1px;
-    border-radius: 10px;
-    flex-grow: 3;
-}
-
-.signup2 {
-    margin-left: 10px;
-    padding: 16px 24px;
-    font-size: 18px;
-    text-align: center;
-    vertical-align: middle;
-    width: auto;
-    background-color: #2ea44f;
-    color: #fff;
-    border: 0;
-    border-radius: 10px;
-    flex-grow: 1;
-    transition: box-shadow .2s;
-}
-
-p {
-    margin: 0%;
-    height: 50%;
-    width: 60%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    color: #fff;
-}
-
-h1 {
-    height: 40%;
-    width: 45%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 72px;
-    font-style: bold;
-    color: #fff;
-}
 
 .subtitle {
-    color: #fff;
+    position: relative;
+    top: 110px;
+    left: 300px;
+    color: #8193B2;
     font-size: 28px;
+    width: 35%;
+}
+
+
+#globepos{
+    position: absolute;
+    left: 1000px;
+    top: 110px;
+    height: 650px;
+    width: 650px;
+    z-index: 1;
+}
+.arrow1{
+    position: relative;
+    top: -6px;
+    right: 25px;
+    width: auto;
+    height: auto;
+    color: grey;
+}
+
+.arrow1:hover .submenu1{
+    display: block;
+}
+
+.arrow2{
+    position: relative;
+    top: -6px;
+    right: 25px;
+    width: auto;
+    height: auto;
+    color: grey;
+}
+
+.arrow2:hover .submenu2{
+    display: block;
+}
+
+.arrow3{
+    position: relative;
+    top: -6px;
+    right: 25px;
+    width: auto;
+    height: auto;
+    color: grey;
+    z-index: 5;
+}
+
+.arrow3:hover .submenu3{
+    display: block;
+}
+
+.emailtext{
+    position: relative;
+    top: 100px;
+    left: 300px;
+    background-color: white;
+    color: grey;
+    font-size: large;
+    border-radius: 7px;
+    height: 40px;
+}
+.signup2{
+    position: relative;
+    top: 60px;
+    left: 550px;
+    border-style: 1px ridge;
+    border-radius: 7px;
+    border-color: rgb(46, 165, 79);
+    background-color: rgb(46, 165, 79);
+    color: white;
+    font-size: large;
+    height: 37px;
+    width: 150px;
+}
+
+hr.lhr{
+    position: relative;
+    top: 250px;
+    width: 1250px;
+    border-top: 1px solid rgb(26, 34, 53);
+}
+
+.bottomtext{
+    position: relative;
+    top: 250px;
+    width: 1300px;
+    height: 150px;
+}
+
+.bottombox1{
+    position: relative;
+    left:350px;
+}
+
+
+.bottombox2{
+   position: relative;
+   left: 500px;
+   top: -67px;
+}
+
+
+.bottombox3{
+    position: relative;
+    left: 680px;
+    top: -138px;
     width: 50%;
 }
 
 
+.bottombox4{
+    position: relative;
+    left: 835px;
+    top: -205px;
+    width: 50%;
+}
