@@ -1,11 +1,18 @@
-/* Background */
-.b{
+/* ============================= */
+/* ========== General ========== */
+/* ============================= */
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+}
+
+body{
     margin: 0px;
     height: 100%;
     width: 100%;
-}
-
-.background{
+    
     background-color: rgb(4, 13, 34);
     width: 100%;
     height: 100%;
@@ -13,17 +20,7 @@
     z-index: -3;
 }
 
-#glow{
-    position: absolute;
-    width: 122%;
-    height: 115%;
-    left: -450px;
-    top: -170px;
-    object-fit: cover;
-    object-position: 0 0;
-    z-index: -2;
-}
-
+/* Background */
 #backglobe{
     position: absolute;
     left: 52%;
@@ -41,7 +38,10 @@
     padding: 0 15px;
     margin: 0 auto;
 }
+
+/* ============================= */
 /* ========== Header =========== */
+/* ============================= */
 .cabeçalho{
     width: 100%;
     height: 56px;
@@ -68,7 +68,7 @@
 /* Menus Estáticos */
 .menuitem{
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row-reverse;
     flex-grow: 1;
 }
 
@@ -94,7 +94,7 @@
 
 .menuitemHover1:hover .submenu1{
     color: #8193B2;
-    display: block;
+    display: flex;
 }
 
 .menuitemHover2{ /* Explore */
@@ -103,9 +103,13 @@
     z-index: 3;
 }
 
+.menuitemHover2:hover{
+    color: #8193B2;
+}
+
 .menuitemHover2:hover .submenu2{
     color: #8193B2;
-    display: block;
+    display: flex;
 }
 
 .menuitemHover3{ /* Pricing */
@@ -114,15 +118,20 @@
     z-index: 3;
 }
 
+.menuitemHover3:hover{
+    color: #8193B2;
+}
+
 .menuitemHover3:hover .submenu3{
     color: #8193B2;
-    display: block;
+    display: flex;
 }
 
 /* Submenus */
 .submenu1{ /* Submenu Products */
     position: absolute;
     display: none;
+    flex-direction: column;
     background-color: #fff;
     width: 300px;
     height: auto;
@@ -136,6 +145,7 @@
 .submenu2{ /* Submenu Explore */
     position: absolute;
     display: none;
+    flex-direction: column;
     background-color: #fff;
     width: 300px;
     height: auto;
@@ -146,8 +156,10 @@
     border-radius: 10px;
 }
 
-.submenu3{ /* Submenu Pricing */position: absolute;
+.submenu3{ /* Submenu Pricing */
+    position: absolute;
     display: none;
+    flex-direction: column;
     background-color: #fff;
     width: 300px;
     height: auto;
@@ -215,12 +227,22 @@
     margin-block-end: 0;
 }
 
+.signup :hover{
+    color: #8193B2;
+}
+
+.hamburger {
+    display: none;
+}
+
+/* ============================= */
 /* ========== Wrapper ========== */
+/* ============================= */
 .wrapper{
     display: flex;
     flex-direction: column;
     height: auto;
-    width: 100%;
+    width: 60%;
     padding-top: 10%;
     padding-left: 5%;
     z-index: 1;
@@ -228,8 +250,7 @@
 
 .mainText {
     margin: 0%;
-    height: 40%;
-    width: 50%;
+    height: auto;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 72px;
     font-weight: bold;
@@ -238,63 +259,54 @@
 
 .subtitle {
     margin: 0%;
-    height: 50%;
-    width: 50%;
+    height: auto;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 28px;
     color: #8193B2;
 
 }
 
-.emailsignup{
-    width: 100%;
-    display: flex;
-}
-
 .signupbox {
     padding-top: 30px;
-    flex-flow: row;
-    width: 60%;
+    display: flex;
+    flex-direction: row;
 }
 
 .emailbox {
-    padding: 16px 24px;
-    font-size: 16px;
+    flex-grow: 3;
+}
+
+.emailinput {
+    padding: 8px 24px;
+    font-size: 18px;
     text-align: left;
     vertical-align: middle;
-    line-height: 24px;
+    line-height: 16px;
     height: auto;
-    min-width: 60%;
+    width: auto;
     background-color: #fff;
     color: #8193B2;
     border: 1px;
     border-radius: 10px;
-    flex-grow: 3;
+
 }
 
 .signup2 {
     margin-left: 10px;
     padding: 16px 24px;
     font-size: 18px;
+    font-weight: bold;
     text-align: center;
     vertical-align: middle;
-    width: auto;
     background-color: #2ea44f;
     color: #fff;
-    border: 0;
     border-radius: 10px;
     flex-grow: 1;
-    transition: box-shadow .2s;
 }
 
-p{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    color: #fff;
-}
-
-
+/* ============================= */
 /* ========== Footer =========== */
+/* ============================= */
 .rodape {
     width: 100%;
     height: 10%;
@@ -324,6 +336,11 @@ hr.lhr{
     flex-flow: row wrap;
 }
 
+.bottombox{
+    flex-grow: 1;
+    flex-flow: row wrap;
+}
+
 .boldtext{
     font-size: 22px;
     font-weight: bold;
@@ -333,4 +350,168 @@ hr.lhr{
 .smalltext{
     font-size: 12px;
     font-family: 'Courier New', Courier, monospace;
+}
+
+@media (max-width: 544) {
+    .signupbox {
+        flex-direction: column;
+    }
+    .mainText {
+        font-size:24px;
+    }
+    .subtitle { 
+        font-size: 16px;
+    }    
+    .box1 {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    /* Background */
+    #backglobe{
+    position: absolute;
+    left: 52%;
+    top: 10%;
+    height: 650px;
+    width: 650px;
+    object-fit: cover;
+    overflow: hidden;
+    z-index: -1;
+    }
+
+    .mainText {
+        margin: 0%;
+        height: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 48px;
+        font-weight: bold;
+        text-align: center;
+        color: #fff;
+    }
+    .subtitle {
+        margin: 0%;
+        height: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        text-align: center;
+        color: #8193B2;
+    }
+    .signupbox {
+        width: 100%;
+    }
+    .emailbox {
+        padding: 8px 16px;
+        font-size: 16px;
+        text-align: left;
+        vertical-align: middle;
+        line-height: 24px;
+        height: auto;
+        background-color: #fff;
+        color: #8193B2;
+        border: 1px;
+        border-radius: 10px;
+        flex-grow: 2;
+    }
+    .signup2 {
+        margin-left: 10px;
+        padding: 8px 16px;
+        font-size: 16px;
+        text-align: center;
+        vertical-align: middle;
+        background-color: #2ea44f;
+        color: #fff;
+        border-radius: 10px;
+        flex-grow: 1;
+    }
+    .blankspace {
+        display: none;
+    }
+    #box2 {
+        display: none;
+    }
+}
+
+@media (max-width: 1011px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    #backglobe{
+        position: absolute;
+        left: auto;
+        top: 80%;
+        height: 30%;
+        width: 80%;
+        object-fit: cover;
+        object-position: top;
+        overflow: hidden;
+        z-index: -1;
+    }
+
+    .menuitem {
+        display: none;
+    }
+
+    .blankspace {
+        flex-grow: 3;
+    }
+
+    .searchbox {
+        display: none;
+    }
+    .signin {
+        display: none;
+    }
+    .signup {
+        flex-grow: 1;
+        width: auto;
+    }
+    .hamburger {
+        display: inline-flex;
+        padding-left: 10px;
+    }
+
+    .hamburger :hover .menuitem {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        
+    }
+
+    .wrapper {
+        padding-left: 0%;
+        width: 100%;
+    }
+    .signupbox {
+        width: 100%;
+    }
+    .emailbox {
+        padding: 8px 16px;
+        font-size: 16px;
+        text-align: left;
+        vertical-align: middle;
+        line-height: 24px;
+        height: auto;
+        background-color: #fff;
+        color: #8193B2;
+        border: 1px;
+        border-radius: 10px;
+        flex-grow: 2;
+    }
+    .signup2 {
+        margin-left: 10px;
+        padding: 8px 16px;
+        font-size: 16px;
+        text-align: center;
+        vertical-align: middle;
+        background-color: #2ea44f;
+        color: #fff;
+        border-radius: 10px;
+        flex-grow: 1;
+    }
 }
