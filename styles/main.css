@@ -7,12 +7,20 @@
 
 .background{
     background-color: rgb(4, 13, 34);
-    background-image: url('../source/glow1.svg');
-    background-repeat: no-repeat;
-    padding: 15px;
     width: 100%;
     height: 100%;
     position: absolute;
+    z-index: -3;
+}
+
+#glow{
+    position: absolute;
+    width: 122%;
+    height: 115%;
+    left: -450px;
+    top: -170px;
+    object-fit: cover;
+    object-position: 0 0;
     z-index: -2;
 }
 
@@ -27,6 +35,12 @@
     z-index: -1;
 }
 
+.foreground{
+    width: 80%;
+    height: 80%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
 /* ========== Header =========== */
 .cabeçalho{
     width: 100%;
@@ -164,9 +178,10 @@
 /* Menu Direito */
 .topmenuright{
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row;
     align-items: center;
     flex-grow: 2;
+    width: fit-content;
 }
 
 .searchbox{
@@ -177,23 +192,26 @@
     height: 30px;
     width: 200px;
     border-radius: 7px;
+    flex-grow: 1;
+    
 }
 
 .signin{
     flex-grow: 1;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .signin:hover{
     color: #8193B2;
 }
 .signup{
-    position: relative;
-    right: 10%;
     flex-grow: 1;
     border: 1px ridge;
     border-radius: 7px;
     margin: 0;
-    width: 10px;
+    width: auto;
+    padding: 5px;
     margin-block-end: 0;
 }
 
@@ -202,7 +220,7 @@
     display: flex;
     flex-direction: column;
     height: auto;
-    width: 95%;
+    width: 100%;
     padding-top: 10%;
     padding-left: 5%;
     z-index: 1;
