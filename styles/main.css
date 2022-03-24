@@ -25,15 +25,16 @@ body{
     position: absolute;
     left: 52%;
     top: 10%;
-    height: 650px;
+    height: 90%;
     width: 650px;
     object-fit: cover;
+    object-position: left;
     overflow: hidden;
     z-index: -1;
 }
 
 .foreground{
-    width: 80%;
+    width: 90%;
     height: 100%;
     padding: 0 15px;
     margin: 0 auto;
@@ -190,10 +191,10 @@ body{
 /* Menu Direito */
 .topmenuright{
     display: flex;
-    flex-flow: row;
-    align-items: center;
+    flex-flow: row-reverse;
     flex-grow: 2;
-    width: fit-content;
+    align-items: center;
+    vertical-align: middle;
 }
 
 .searchbox{
@@ -202,14 +203,13 @@ body{
     background-color: transparent;
     color: #fff;
     height: 30px;
-    width: 200px;
+    width: fit-content;
     border-radius: 7px;
-    flex-grow: 1;
     
 }
 
 .signin{
-    flex-grow: 1;
+    width: fit-content;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -218,7 +218,7 @@ body{
     color: #8193B2;
 }
 .signup{
-    flex-grow: 1;
+    width: fit-content;
     border: 1px ridge;
     border-radius: 7px;
     margin: 0;
@@ -276,17 +276,18 @@ body{
 }
 
 .emailinput {
-    padding: 8px 24px;
+    padding: 16px 24px;
     font-size: 18px;
     text-align: left;
     vertical-align: middle;
     line-height: 16px;
-    height: auto;
-    width: auto;
+    height: inherit;
+    width: 85%;
     background-color: #fff;
     color: #8193B2;
     border: 1px;
     border-radius: 10px;
+    flex-grow: 2;
 
 }
 
@@ -294,8 +295,9 @@ body{
     padding: 16px 24px;
     font-size: 18px;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
     vertical-align: middle;
+    line-height: 16px;
     background-color: #2ea44f;
     color: #fff;
     border-radius: 10px;
@@ -358,12 +360,28 @@ hr.lhr{
     /* Background */
     #backglobe{
     position: absolute;
-    top: 80%;
+    top: 70%;
     height: 30%;
     width: 80%;
     object-fit: cover;
     object-position: top;
     overflow: hidden;
+    }
+
+    .foreground {
+        width: 80%;
+    }
+
+    .topmenuleft {
+        flex-grow: 0;
+    }
+
+    .topmenuright {
+        flex-grow: 0;
+    }
+
+    .blankspace {
+        flex-grow: 3;
     }
 
     .mainText {
@@ -443,19 +461,12 @@ hr.lhr{
         display: none;
     }
 
-    .blankspace {
-        flex-grow: 3;
-    }
 
     .searchbox {
         display: none;
     }
     .signin {
         display: none;
-    }
-    .signup {
-        flex-grow: 1;
-        width: auto;
     }
     .hamburger {
         display: inline-flex;
