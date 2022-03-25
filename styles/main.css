@@ -33,6 +33,18 @@ body{
     z-index: -1;
 }
 
+#glowLeft{
+    display:none;
+    position:fixed;
+    z-index: -4;
+}
+
+#glowRight{
+    display:none;
+    position:fixed;
+    z-index: -4;
+}
+
 .foreground{
     width: 90%;
     height: 100%;
@@ -369,6 +381,29 @@ hr.lhr{
         z-index: -1;
     }
 
+    #glowLeft{
+        display: block;
+        position: absolute;
+        top: 10%;
+        height: 30%;
+        width: 30%;
+        object-fit: fill;
+        object-position: top left;
+        overflow: hidden;
+    }
+
+    #glowRight{
+        display: block;
+        position: absolute;
+        top: 10%;
+        left: 60%;
+        height: 60%;
+        width: 40%;
+        object-fit: fill;
+        object-position: top right;
+        overflow: hidden;
+    }
+    
     .menuitem {
         display: none;
     }
@@ -465,6 +500,29 @@ hr.lhr{
         width: 80%;
     }
 
+    #glowLeft{
+        display: block;
+        position: absolute;
+        top: 30%;
+        height: 30%;
+        width: 30%;
+        object-fit: fill;
+        object-position: top left;
+        overflow: hidden;
+    }
+
+    #glowRight{
+        display: block;
+        position: absolute;
+        top: 30%;
+        left: 60%;
+        height: 60%;
+        width: 40%;
+        object-fit: fill;
+        object-position: top right;
+        overflow: hidden;
+    }
+    
     .topmenuleft {
         flex-grow: 1;
     }
