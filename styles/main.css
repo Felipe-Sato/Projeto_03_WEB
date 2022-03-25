@@ -25,8 +25,8 @@ body{
     position: absolute;
     left: 52%;
     top: 10%;
-    height: 90%;
-    width: 650px;
+    height: 100%;
+    width: 640px;
     object-fit: cover;
     object-position: left;
     overflow: hidden;
@@ -572,6 +572,7 @@ hr.lhr{
         width: 80%;
     }
     .signup2 {
+        margin-top: 10px;
         padding: 8px 16px;
         font-size: 16px;
         text-align: center;
