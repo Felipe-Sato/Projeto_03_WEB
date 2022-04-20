@@ -1,8 +1,8 @@
-# Projeto_01_WEB
+# Projeto_02_WEB
 
-## Projeto 1 - Desenvolvimento estático da interface
+## Projeto 2 - Implementação Javascript e AJAX
 
-Desenvolvimento estático da página inicial do site GitHub.com através do uso de HTML e CSS de forma responsiva.
+Desenvolvimento e implementação das funções de Login e Consulta com API
 
 ## Disclaimer
 Projeto desenvolvido como atividade avaliativa para a disciplina de AS34A Programação Web ministrada pelo professor Willian Massami Watanabe do curso de graduação em Engenharia de Computação da Universidade Técnológica Federal do Paraná.
