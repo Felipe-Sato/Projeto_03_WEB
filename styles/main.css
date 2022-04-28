@@ -254,7 +254,7 @@ body{
     display: flex;
     flex-direction: column;
     height: auto;
-    width: 60%;
+    width: 80%;
     padding-top: 10%;
     padding-left: 5%;
     z-index: 1;
@@ -302,7 +302,7 @@ body{
 /* ========== Dialog =========== */
 .dialog {
     background-color: #8193B2;
-    width: 80%;
+    width: 100%;
     border-radius: 10px;
     opacity: 0.7;
 }
@@ -362,11 +362,11 @@ body{
     width: 80%;
     padding: 0 10%;
     font-family: 'Times New Roman', Times, serif;
-    font-size:16px;
+    font-size:24px;
     color: #222;
 }
 .word {
-    font-size: 24px;
+    font-size: 32px;
     font-weight: bold;
     font-style: italic;
 }
