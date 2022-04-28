@@ -357,6 +357,32 @@ body{
     flex-grow: 1;
 }
 
+/* Resposta */
+.response {
+    width: 80%;
+    padding: 0 10%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:16px;
+    color: #222;
+}
+.word {
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.phonetic {
+    font-style: italic;
+}
+
+.partOfSpeech {
+    font-weight: bold;
+}
+
+.definition {
+    font-weight: normal;
+}
+
 /*
 @media (max-width: 1011px) {
     body {
