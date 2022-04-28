@@ -10,14 +10,30 @@ button.addEventListener("click", async function() {
     for (var i = 0; i < obj.length; i++) {
         var li = document.createElement("li");
             li.innerHTML = obj[i].word;
-            console.log(obj[i].word);
-            console.log(obj[i].meanings);
-            console.log(obj[i].license);
-            /*
-        for (var j = 0; j < obj[i].meanings.length; j) {
-            li.innerHTML = obj[i].meanings[j];
-            console.log(li.innerHTML);
+            ul.appendChild(li);
+            console.log(obj[i].license.name);
+            console.log(obj[i].license.url);
+
+        for (var j = 0; j < obj[i].meanings.length; j++) {
+            console.log(obj[i].meanings[j].partOfSpeech);
+            li.innerHTML = obj[i].meanings[j].partOfSpeech;
+            ul.appendChild(li);
+            li.innerHTML = obj[i].meanings[j].synonyns;
+            ul.appendChild(li);
+            li.innerHTML = obj[i].meanings[j].antonyns;
+            ul.appendChild(li);
+
+            for (var k = 0; k < obj[i].meanings[j].definitions.length; k++) {
+                console.log(obj[i].meanings[j].definitions[k].definition)
+                li.innerHTML = obj[i].meanings[j].definitions[k].definition;
+                ul.appendChild(li);
+                li.innerHTML = obj[i].meanings[j].definitions[k].synonyns;
+                ul.appendChild(li);
+                li.innerHTML = obj[i].meanings[j].definitions[k].antonyns;
+                ul.appendChild(li);
+                li.innerHTML = obj[i].meanings[j].definitions[k].example;
+                ul.appendChild(li);
+            }
         }
-        */
     }
 })
