@@ -260,6 +260,26 @@ body{
     z-index: 1;
 }
 
+.mainText {
+    margin: 0%;
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 72px;
+    font-weight: bold;
+    color: #fff;
+    width: 60%;
+}
+
+.subtitle {
+    margin: 0%;
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    color: #8193B2;
+    width: 60%;
+}
+
+
 /* ========== Login ===========  */
 .displaynone{
     display: none;
