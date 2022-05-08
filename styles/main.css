@@ -356,6 +356,11 @@ body{
     flex-grow: 1;
 }
 
+.erro{
+    background-color: #8193B2;
+    flex-grow: 1;
+}
+
 /* ========== Search =========== */
 .search {
     background-color: #8193B2;
