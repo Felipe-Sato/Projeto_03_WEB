@@ -4,13 +4,13 @@ function logado(){
     document.getElementById('signup').classList.add('displaynone');
     document.getElementById('signin').classList.add('displaynone');
     document.getElementById('signupbox').classList.toggle('displaynone', true);
-    document.querySelector('.dialog').classList.toggle('displaynone', false);
+    document.querySelector('.search').classList.toggle('displaynone', false);
 
     } else {
 
         document.getElementById('signup').classList.remove('displaynone');
         document.getElementById('signin').classList.remove('displaynone');
-        document.querySelector('.dialog').classList.toggle('displaynone', true);
+        document.querySelector('.search').classList.toggle('displaynone', true);
     }
 
 }
