@@ -48,28 +48,28 @@ submit.addEventListener("click", async function() {
 
             var ol = document.createElement("ol");
             ol.className = "definitions";
-
+            //definitions
             for (var j = 0; j < obj[0].meanings[i].definitions.length; j++) {
                 var definition = document.createElement("li");
                 definition.className = "definition"
                 definition.innerHTML = obj[0].meanings[i].definitions[j].definition;
 
                 var ul = document.createElement("ul");
-
+                //synonyns
                 if (obj[0].meanings[i].definitions[j].synonyns != null) {
                     var synonyns = document.createElement("li");
                     synonyns.className = "synonyns";
                     synonyns.innerHTML = obj[0].meanings[i].definitions[j].synonyns;
                     ul.appendChild(synonyns)
                 }
-
+                //antonyns
                 if (obj[0].meanings[i].definitions[j].antonyns != null) {
                     var antonyns = document.createElement("li");
                     antonyns.className = "antonyns";
                     antonyns.innerHTML = obj[0].meanings[i].definitions[j].antonyns;
                     ul.appendChild(antonyns);
                 }
-
+                //example
                 if (obj[0].meanings[i].definitions[j].example != null) {
                     var example = document.createElement("li");
                     example.className = "example";
