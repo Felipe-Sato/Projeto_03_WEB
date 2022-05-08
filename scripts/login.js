@@ -42,6 +42,7 @@ document.getElementById('signup2').addEventListener('click', async function(emai
         )
     }
 })
+
 //para testar o login podemos utilizar o registrado por nos 
 //(utilizando o email padrão mais a senha de escolha)
 document.getElementById('signin2').addEventListener('click', async function(emailinput, pswinput){
@@ -64,27 +65,3 @@ document.getElementById('signin2').addEventListener('click', async function(emai
 })
 
 logado();
-
-document.getElementById('btnlogoff').addEventListener('click',function(){
-    document.getElementById('btnlogoff').classList.add('displaynone');
-    localStorage.removeItem('token');
-
-    logado();
-})
-
-
-function logado(){
-if(localStorage.getItem("token") != null){
-document.getElementById('btnlogoff').classList.remove('displaynone');
-document.getElementById('signup').classList.add('displaynone');
-document.getElementById('signin').classList.add('displaynone');
-document.getElementById('signupbox').classList.toggle('displaynone', true)
-
-}else{
-
-    document.getElementById('signup').classList.remove('displaynone');
-    document.getElementById('signin').classList.remove('displaynone');
-
-}
-
-}
