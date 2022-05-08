@@ -330,6 +330,7 @@ body{
     vertical-align: middle;
     line-height: 16px;
     background-color: #222723;
+    width: 80%;
     color: #fff;
     border-radius: 10px;
     flex-grow: 1;
@@ -338,13 +339,13 @@ body{
 /* ========== Search =========== */
 .search {
     background-color: #8193B2;
-    width: 100%;
+    width: 80%;
     border-radius: 10px;
     opacity: 0.7;
 }
 
 .search-content {
-    padding-bottom:30px;
+    padding-top:20px;
     display: flexbox;
     flex-direction: row;
     font-size: 18px;
@@ -353,16 +354,16 @@ body{
     vertical-align: middle;
     line-height: 16px;
     height: 20%;
-    width: 100%;
+    width: 80%;
 }
 
 .search_field {
-    padding: 0 10%;
+    padding: 0 5%;
 
 }
 
 .search_button {
-    padding: 10px 10%;
+    padding: 10px 5%;
 }
 
 #search {
