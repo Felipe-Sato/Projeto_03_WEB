@@ -220,16 +220,16 @@ body{
     
 }
 
-.signin{
+#signin{
     width: fit-content;
     padding-left: 10px;
     padding-right: 10px;
 }
 
-.signin:hover{
+#signin:hover{
     color: #8193B2;
 }
-.signup{
+#signup{
     width: fit-content;
     border: 1px ridge;
     border-radius: 7px;
@@ -239,7 +239,7 @@ body{
     margin-block-end: 0;
 }
 
-.signup :hover{
+#signup :hover{
     color: #8193B2;
 }
 
@@ -261,9 +261,12 @@ body{
 }
 
 /* ========== Login ===========  */
+.displaynone{
+    display: none;
+}
+
 .signupbox {
     padding-top: 30px;
-    display: none;
     flex-direction: row;
 }
 
@@ -294,6 +297,19 @@ body{
     vertical-align: middle;
     line-height: 16px;
     background-color: #2ea44f;
+    color: #fff;
+    border-radius: 10px;
+    flex-grow: 1;
+}
+
+.btnlogoff{
+    padding: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 16px;
+    background-color: #222723;
     color: #fff;
     border-radius: 10px;
     flex-grow: 1;
