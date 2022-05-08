@@ -1,11 +1,15 @@
 function logado(){
     if(localStorage.getItem("token") != null) {
-    document.getElementById('login').classList.toggle('displaynone', true);
+    document.getElementById('btnlogoff').classList.remove('displaynone');
+    document.getElementById('signup').classList.add('displaynone');
+    document.getElementById('signin').classList.add('displaynone');
+    document.getElementById('signupbox').classList.toggle('displaynone', true);
     document.querySelector('.dialog').classList.toggle('displaynone', false);
 
     } else {
 
-        document.getElementById('login').classList.remove('displaynone');
+        document.getElementById('signup').classList.remove('displaynone');
+        document.getElementById('signin').classList.remove('displaynone');
         document.querySelector('.dialog').classList.toggle('displaynone', true);
     }
 
