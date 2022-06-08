@@ -1,0 +1,21 @@
+{
+  "name": "dicionario",
+  "version": "1.0.0",
+  "description": "JSON Dictionary API for test with Insert, Remove and Read methods",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "API",
+    "Dictionary",
+    "JSON"
+  ],
+  "author": "Felipe Sato",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "hbs": "^4.2.0",
+    "mongodb": "^4.7.0"
+  }
+}

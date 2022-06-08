@@ -1,0 +1,1 @@
+import WordDAO from './app/models/Words';
