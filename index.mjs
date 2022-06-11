@@ -7,7 +7,7 @@ app.set('views', path.join(__dirname, 'app.views'));
 app.set('view engine', 'hbs');
 
 // Node.js Middleware
-
+app.use();
 
 // Main App
 var app = express(),
