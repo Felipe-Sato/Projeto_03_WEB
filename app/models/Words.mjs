@@ -4,13 +4,21 @@ import {MongoClient as Client} from 'mongodb';
 module.exports = class Word {
     static async find(key) {
         return Client.connect('mongodb://localhost:27017/projeto3', async (err, db) => {
-            return db.collection('words').find(key).toArray();
+            if(!err) {
+                return db.collection('words').find(key).toArray();
+            } else {
+                throw err;
+            }
         });
     }
 
     static async post(key) {
         return Client.connect('mongodb://localhost:27017/projeto3', async (err, db) => {
-            return db.collection('words').insertOne(key);
+            if(!err) {
+                return db.collection('words').insertOne(key);
+            } else {
+                throw err;
+            }
         });
     }
 }

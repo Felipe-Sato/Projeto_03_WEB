@@ -13,7 +13,15 @@ app.use();
 var app = express(),
     port;
 
-app.use(cors)
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
+app.use(express.static('./public'));
+app.use(compression({ threshold: 0 }));
+app.use(morgan('tiny'));
+app.use(cors());
 
+app.use('/user', User_Router);
+app.use('/word', Word_Router);
 
 http.createServer(app).listen(port);
