@@ -32,6 +32,7 @@ function verificaSenha(pswinput){
 //para testar o registro(signup) temos de usar o usuario definido pela API (para testes)
 //podendo escolher qualquer senha para o registro
 //email: eve.holt@reqres.in
+//senha: cityslicka
 
 document.getElementById('signup2').addEventListener('click', async function(emailinput, pswinput){
     emailinput=document.getElementById('user_email');
