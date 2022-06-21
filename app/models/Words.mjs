@@ -1,24 +1,27 @@
-import {MongoClient as Client} from 'mongodb';
+import mongoose from "mongoose";
 
-// Classe de acesso ao banco de dados das palavras
-module.exports = class Word {
-    static async find(key) {
-        return Client.connect('mongodb://localhost:27017/projeto3', async (err, db) => {
-            if(!err) {
-                return db.collection('words').find(key).toArray();
-            } else {
-                throw err;
-            }
-        });
-    }
+const wordSchema = new mongoose.Schema({
+    word : {
+        type : 'string',
+        required : true,
+        unique : false,
+        maxLength :255,
+        minLength :1
+    },
 
-    static async post(key) {
-        return Client.connect('mongodb://localhost:27017/projeto3', async (err, db) => {
-            if(!err) {
-                return db.collection('words').insertOne(key);
-            } else {
-                throw err;
-            }
-        });
+    definitionType : {
+        type : 'string',
+        required : true,
+        maxLength :255,
+        minLength :1
+    },
+
+    definitionText : {
+        type : 'string',
+        required : true,
+        maxLength :255,
+        minLength :1
     }
-}
+});
+
+module.exports = mongoose.model('Word', wordSchema);
