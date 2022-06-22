@@ -1,28 +1,47 @@
+import cookieParser from 'cookie-parser';
+import cors from 'cors';
+import dotenv from 'dotenv';
 import express from 'express';
 import http from 'http';
+import mongoose from 'mongoose';
+import morgan from 'morgan';
 import path from 'path';
-const User_Router = require('./app/routes/UserRouter.mjs');
-const Word_Router = require('./app/routes/WordRouter.mjs');
+import { fileURLToPath } from 'url'
+
+import UserRouter from './app/routes/UserRouter.js';
+import WordRouter from './app/routes/WordRouter.js';
+
+var app = express();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+dotenv.config();
+//Conectar ao Banco de Dados
+mongoose.connect("mongodb://localhost:27017/projetoWEB3", { useNewUrlParser: true, useUnifiedTopology: true },() => 
+    console.log('Connection established')
+);
 
 // App.Set
-app.set('views', path.join(__dirname, 'app.views'));
 app.set('view engine', 'hbs');
+app.set('view', './app/view');
 
 // Node.js Middleware
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static('./public'));
-app.use(compression({ threshold: 0 }));
 app.use(morgan('tiny'));
 app.use(cors());
 
-app.use('/user', User_Router);
-app.use('/word', Word_Router);
+app.use('/user', UserRouter);
+app.use('/word', WordRouter);
+
 
 // Main App
-var app = express(),
-    port;
+app.get('/', (req, res) => {
+    res.render('./app/public/index.html');
+});
 
-
-http.createServer(app).listen(port);
+const PORT = process.env.PORT || 3000;
+http.createServer(app).listen(PORT);
