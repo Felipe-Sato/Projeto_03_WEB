@@ -1,20 +1,15 @@
-var submit = document.querySelector("#submit"),
+var search = document.querySelector("#search"),
     reset = document.querySelector("#reset"),
-    termo,
     response = document.querySelector(".response");
 
-submit.addEventListener("click", async function() {
+search.addEventListener("click", async function () {
     // Clear response box
     response.innerHTML = '';
-    termo = document.querySelector("#search").value;
+    var termo = document.querySelector("#termo").value;
 
     // Implementação da consulta AJAX com API Fetch e Async e Await
-    let Body = await fetch("https://api.dictionaryapi.dev/api/v2/entries/en/"+termo);
-    if (!Body.ok) {
-        response.innerHTML = "Erro ao pesquisar: " + termo;
-    } else {
-        let obj = await Body.json();
-
+    let obj = await fetch('http://localhost:27017/projetoWEB3/Words'+ termo).json();
+    if (obj.status === 200) {
         /* ====== Estruturas da resposta ====== */
         // Word
         var word = document.createElement("p");
@@ -35,9 +30,13 @@ submit.addEventListener("click", async function() {
             definitions.appendChild(definitionType);
         }
         response.appendChild(definitions);
+    } else {
+        document.querySelector('#erro').innerHTML = data.error;
+        document.querySelector('#erro').classList.toggle('displaynone', false);
     }
 });
 
-reset.addEventListener("click", function(){
+reset.addEventListener("click", function () {
+    termo.value = '';
     response.innerHTML = '';
-})
+});
