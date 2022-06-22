@@ -49,25 +49,48 @@
                     <h1 class="mainText">Where the world builds software</h1>
                     <p class="subtitle">Millions of developers and companies build, ship, and maintain their software on GitHub—the largest and most advanced development platform in the world. Click on Sign In to start exploring!</p>
                 </div>
+
                 <!-- Login Form -->
                 <button id="btnlogoff" class="btnlogoff displaynone">Voce esta logado, clique para fazer logoff</button>
                 <div id="signupbox"class="signupbox displaynone">
+                    <div class="email-header">
+                        <button type="button" id="btn-form-signup" class="btn-login">Sign Up</button>
+                        <button type="button" id="btn-form-signin" class="btn-login">Sign In</button>
+                    </div>
                     <form class="emailbox">
-                        <input class="emailinput" placeholder="Email address" type="email" id="user_email" name="user_email"/>
-                        <input class="senhainput" placeholder="Password" type="password" id="user_password" name="user_senha"/>
+                        <input class="emailinput displaynone" placeholder="Username"   
+                                type="text"        
+                                id="user_name"     
+                                name="user_name"/>
+                        <input class="emailinput" placeholder="Email address"   
+                                type="email"        
+                                id="user_email"     
+                                name="user_email"/>
+                        <input class="senhainput" placeholder="Password"        
+                                type="password"     
+                                id="user_password"  
+                                name="user_senha"/>
                         <p id="erro"class="erro displaynone"></p>
                     </form>
                     <button id="signup2" class="signup2">Sign up for GitHub</button>
                     <button id="signin2" class="signup2">Sign in Account</button>
                 </div>
+
                 <!-- Search Form -->
                 <div class="search displaynone">
                     <div class="search-content">
+                        <div class="search-header">
+                            <button class="form_btn" id="btn-form-search">Buscar</button>
+                            <button class="form_btn" id="btn-form-insert">Adicionar</button>
+                        </div>
                         <div class="search_field">
-                            <input type="text" placeholder="Palavra a ser pesquisada" id="search"/>
+                            <input class="search_field" name="Word" type="text" id="termo" placeholder="Palavra"/>
+                            <input class="search_field displaynone" name="Type" type="text" id="type" placeholder="Tipo"/>
+                            <input class="search_field displaynone" name="Text" type="text" id="text" placeholder="Definição"/>
                         </div>
                         <div class="search_button">
-                            <button class="form_btn" id="submit">Pesquise</button>
+                            <button class="form_btn" id="search">Buscar</button>
+                            <button class="form_btn displaynone" id="insert">Inserir</button>
                             <button class="form_btn" id="reset">Limpar</button>
                         </div>
                     </div>
@@ -78,6 +101,7 @@
         </div>
         <script src="scripts/control.js"></script>
         <script src="scripts/login.js"></script>
-        <script src="scripts/search.js"></script>
+        <script src="scripts/getWord.js"></script>
+        <script src="scripts/setWord.js"></script>
     </body>
 </html>

@@ -22,7 +22,27 @@ function logado(){
 document.getElementById('btnlogoff').addEventListener('click',function(){
     document.getElementById('btnlogoff').classList.add('displaynone');
     localStorage.removeItem('token');
-
     logado();
-})
+});
 
+document.querySelector('#btn-form-signup').addEventListener('click',function(){
+    document.querySelector('#user_name').classList.toggle('displaynone', false);
+});
+
+document.querySelector('#btn-form-signin').addEventListener('click',function(){
+    document.querySelector('#user_name').classList.toggle('displaynone', true);
+});
+
+document.querySelector('#btn-form-insert').addEventListener('click',function(){
+    document.querySelector('#type').classList.toggle('displaynone', false);
+    document.querySelector('#text').classList.toggle('displaynone', false);
+    document.querySelector('#search').classList.toggle('displaynone', true);
+    document.querySelector('#insert').classList.toggle('displaynone', false);
+});
+
+document.querySelector('#btn-form-search').addEventListener('click',function(){
+    document.querySelector('#type').classList.toggle('displaynone', true);
+    document.querySelector('#text').classList.toggle('displaynone', true);
+    document.querySelector('#search').classList.toggle('displaynone', false);
+    document.querySelector('#insert').classList.toggle('displaynone', true);
+});
