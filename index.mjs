@@ -30,8 +30,8 @@ app.use(express.static('./public'));
 app.use(morgan('tiny'));
 app.use(cors());
 
-app.use('/user', UserRouter);
-app.use('/word', WordRouter);
+app.use('/Users', UserRouter);
+app.use('/Words', WordRouter);
 
 const PORT = process.env.PORT || 3000;
 http.createServer(app).listen(PORT);
