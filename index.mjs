@@ -16,6 +16,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 dotenv.config();
+
 //Conectar ao Banco de Dados
 mongoose.connect(process.env.DB_CONNECT, 
     { useNewUrlParser: true, useUnifiedTopology: true },() => {
