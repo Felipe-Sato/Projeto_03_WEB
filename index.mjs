@@ -17,7 +17,7 @@ const __dirname = path.dirname(__filename);
 
 dotenv.config();
 //Conectar ao Banco de Dados
-mongoose.connect("mongodb://localhost:27017/projetoWEB3", 
+mongoose.connect(process.env.DB_CONNECT, 
     { useNewUrlParser: true, useUnifiedTopology: true },() => {
         console.log('Connection established');
     }
