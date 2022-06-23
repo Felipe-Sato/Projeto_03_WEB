@@ -30,14 +30,14 @@ module.exports = {
         
         try {
             // Auth token
-            jwt.verify(token, JWT_SECRET);
+            // jwt.verify(token, JWT_SECRET);
                 
             // Create new User
             const reply = await User.createElement({
-                nome: nome, 
-                email: email, 
-                senha: senha, 
-                admin: admin
+                nome, 
+                email, 
+                senha,
+                admin
             }, function (err, reply) {
                 if (err) {
                     res.status(400); // Not created
