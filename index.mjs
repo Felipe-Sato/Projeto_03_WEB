@@ -33,11 +33,5 @@ app.use(cors());
 app.use('/user', UserRouter);
 app.use('/word', WordRouter);
 
-
-// Main App
-app.get('/', (req, res) => {
-    res.render('./app/public/index.html');
-});
-
 const PORT = process.env.PORT || 3000;
 http.createServer(app).listen(PORT);
