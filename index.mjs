@@ -20,7 +20,7 @@ dotenv.config();
 //Conectar ao Banco de Dados
 mongoose.connect(process.env.DB_CONNECT, 
     { useNewUrlParser: true, useUnifiedTopology: true },() => {
-        console.log('Connection established');
+        console.log('Connection established on MongoDB Cloud');
     }
 );
 
