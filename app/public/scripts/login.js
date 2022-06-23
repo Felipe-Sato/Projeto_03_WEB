@@ -30,12 +30,8 @@ function verificaSenha(pswinput) {
     }
 }
 
-//para testar o registro(signup) temos de usar o usuario definido pela API (para testes)
-//podendo escolher qualquer senha para o registro
-//email: eve.holt@reqres.in
-//senha: cityslicka
-
-document.getElementById('signup2').addEventListener('click',  function (emailinput, pswinput) {
+document.getElementById('signup2').addEventListener('click',  function (nomeinput, emailinput, pswinput) {
+    nomeinput = document.getElementById('user_name');
     emailinput = document.getElementById('user_email');
     pswinput = document.getElementById('user_password');
 
@@ -44,11 +40,12 @@ document.getElementById('signup2').addEventListener('click',  function (emailinp
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
+                nome: nomeinput.value,
                 email: emailinput.value,
-                password: pswinput.value
+                senha: pswinput.value,
+                admin: false
             })
-        }
-        )
+        });
         if (!json.ok) {
             document.getElementById('erro').innerHTML = "Erro na consulta a API";
             document.getElementById('erro').classList.toggle('displaynone', false);
@@ -57,8 +54,6 @@ document.getElementById('signup2').addEventListener('click',  function (emailinp
 
 })
 
-//para testar o login podemos utilizar o registrado por nos 
-//(utilizando o email padrão mais a senha de escolha)
 document.getElementById('signin2').addEventListener('click', async function (emailinput, pswinput) {
     emailinput = document.getElementById('user_email');
     pswinput = document.getElementById('user_password');
