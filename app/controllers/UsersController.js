@@ -3,19 +3,20 @@ const jwt = require('jsonwebtoken');
 const JWT_SECRET = 'as34a';
 
 module.exports = {
-    get : async (req, res) => {
+    get: async (req, res) => {
         const { token } = req.query;
         const { email } = req.query;
+        console.log('User Controller GET');
 
         try {
             // Auth token
             jwt.verify(token, JWT_SECRET);
-            
+
             // Search for user
-            const reply = await User.find({email: email});
-    
+            const reply = await User.find({ email: email });
+
             // Error treatment
-            if  (reply.length === 0) {
+            if (reply.length === 0) {
                 res.status(404).json({ status: '404', error: '404 Not Found' });
             } else {
                 res.status(200).json({ status: '200', data: reply });
@@ -24,18 +25,19 @@ module.exports = {
             res.status(401).json({ status: '401', error: '401 Not Authenticaded' });
         }
     },
-    post : async (req, res) => {
+    post: async (req, res) => {
         const { token } = req.query;
-        const { nome, email, senha, admin} = req.body;
-        
+        const { nome, email, senha, admin } = req.body;
+        console.log('User Controller POST');
+
         try {
             // Auth token
             // jwt.verify(token, JWT_SECRET);
-                
+
             // Create new User
             const reply = await User.createElement({
-                nome, 
-                email, 
+                nome,
+                email,
                 senha,
                 admin
             }, function (err, reply) {
