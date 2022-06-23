@@ -21,10 +21,6 @@ mongoose.connect("mongodb://localhost:27017/projetoWEB3", { useNewUrlParser: tru
     console.log('Connection established')
 );
 
-// App.Set
-app.set('view engine', 'hbs');
-app.set('view', './app/view');
-
 // Node.js Middleware
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
