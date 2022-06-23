@@ -30,14 +30,14 @@ function verificaSenha(pswinput) {
     }
 }
 
-document.getElementById('signup2').addEventListener('click',  function (nomeinput, emailinput, pswinput) {
+document.getElementById('signup2').addEventListener('click',  async function (nomeinput, emailinput, pswinput) {
     nomeinput = document.getElementById('user_name');
     emailinput = document.getElementById('user_email');
     pswinput = document.getElementById('user_password');
 
     if (verificaEmail(emailinput) && verificaSenha(pswinput)) {
-        const json =  fetch('https://web-api-dicionario-simples.herokuapp.com/Users', {
-            method: 'POST',
+        const json = await fetch('https://web-api-dicionario-simples.herokuapp.com/Users', {
+            method: 'post',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 nome: nomeinput.value,
@@ -59,7 +59,7 @@ document.getElementById('signin2').addEventListener('click', async function (ema
     pswinput = document.getElementById('user_password');
     if (verificaEmail(emailinput) && verificaSenha(pswinput)) {
         const json = await fetch('https://web-api-dicionario-simples.herokuapp.com/Users', {
-            method: 'POST',
+            method: 'post',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 email: emailinput.value,

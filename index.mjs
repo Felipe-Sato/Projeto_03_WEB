@@ -17,8 +17,10 @@ const __dirname = path.dirname(__filename);
 
 dotenv.config();
 //Conectar ao Banco de Dados
-mongoose.connect("mongodb://localhost:27017/projetoWEB3", { useNewUrlParser: true, useUnifiedTopology: true },() => 
-    console.log('Connection established')
+mongoose.connect("mongodb://localhost:27017/projetoWEB3", 
+    { useNewUrlParser: true, useUnifiedTopology: true },() => {
+        console.log('Connection established');
+    }
 );
 
 // Node.js Middleware
@@ -30,6 +32,7 @@ app.use(express.static('./public'));
 app.use(morgan('tiny'));
 app.use(cors());
 
+console.log('App INDEX.mjs');
 app.use('/Users', UserRouter);
 app.use('/Words', WordRouter);
 
