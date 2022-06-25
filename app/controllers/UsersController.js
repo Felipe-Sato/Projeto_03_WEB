@@ -51,14 +51,14 @@ module.exports = {
 
         try {
             // Search User
-            const reply = await User.findOne({
+            const reply = await User.find({
                 email: email,
                 senha: senha
             });
-            if(reply != null) {
-                const token = jwt.sign(reply, JWT_SECRET);
-                res.status(200).json({ status: '200', data: token });
-            }
+            console.log(reply);
+            const token = jwt.sign(reply, JWT_SECRET);
+            console.log(token);
+            res.status(200).json({ status: '200', data: token });
         } catch (err) {
             console.log(err);
             res.status(401).json({ status: '401', error: '401 Not Authenticaded' });
