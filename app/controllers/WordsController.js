@@ -26,6 +26,7 @@ module.exports = {
         console.log('Word Controller POST');
 
         try {
+            console.log(req.body);
             // Create new Word
             const reply = await Word.create({
                 word: word,
@@ -34,6 +35,7 @@ module.exports = {
             });
             res.status(200).json({ status: '200' });
         } catch (err) {
+            console.log(err);
             res.status(401).json({ status: '401', error: '401 Not Authenticaded' });
         }
     }

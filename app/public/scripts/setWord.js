@@ -11,6 +11,7 @@ insert.addEventListener("click", async function () {
     let Body = await fetch('https://web-api-dicionario-simples.herokuapp.com/Words', {
         method: "POST",
         headers: { contentType: "application/json; charset=utf-8" },
+        mode: "cors",
         body: JSON.stringify({
             word: termo,
             definitionType: type,
