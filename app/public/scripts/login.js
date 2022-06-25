@@ -66,7 +66,7 @@ document.getElementById('signin2').addEventListener('click', async function (ema
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 email: emailinput.value,
-                password: pswinput.value
+                senha: pswinput.value
             })
         });
         let data = await json.json();
