@@ -38,8 +38,9 @@ module.exports = {
                 senha,
                 admin
             });
-            console.log(reply);
-            res.status(200).json({ status: '200 OK' });
+            if (reply != null) {
+                res.status(200).json({ status: '200', data: token });
+            }
         } catch (err) {
             console.log(err);
             res.status(401).json({ status: '401', error: '401 Not Authenticaded' });
@@ -53,10 +54,13 @@ module.exports = {
         try {
             // Create new User
             const reply = await User.findOne({
-                email,
-                senha
+                email: email,
+                senha: senha
             });
-            res.status(200).json({ status: '200 OK' });
+            if(reply != null) {
+                const token = jwt.sign(reply, JWT_SECRET);
+                res.status(200).json({ status: '200', data: token });
+            }
         } catch (err) {
             console.log(err);
             res.status(401).json({ status: '401', error: '401 Not Authenticaded' });
