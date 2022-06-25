@@ -13,7 +13,7 @@ module.exports = {
             //jwt.verify(token, JWT_SECRET);
 
             // Search for user
-            const reply = await User.find({ email: email });
+            const reply = await User.find({ });
 
             // Error treatment
             /*if (reply.length === 0) {
