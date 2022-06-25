@@ -26,7 +26,6 @@ module.exports = {
         }
     },
     post: async (req, res) => {
-        const { token } = req.query;
         const { nome, email, senha, admin } = req.body;
         console.log('User Controller POST');
         console.log(req.body);

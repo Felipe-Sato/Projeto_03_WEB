@@ -23,11 +23,6 @@ const userSchema = new mongoose.Schema({
         minLength :1
     },
 
-    token : {
-        type : 'string',
-        required : true
-    },
-
     admin : {
         type : 'boolean',
         required : true
