@@ -36,7 +36,7 @@ module.exports = {
             // jwt.verify(token, JWT_SECRET);
 
             // Create new User
-            const reply = await User.createElement({
+            const reply = await User.create({
                 nome,
                 email,
                 senha,
