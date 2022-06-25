@@ -8,9 +8,9 @@ insert.addEventListener("click", async function () {
         text = document.querySelector("#text").value;
 
     // Implementação da consulta AJAX com API Fetch e Async e Await
-    let Body = await fetch('https://web-api-dicionario-simples.herokuapp.com/Words', {
+    const json = await fetch('https://web-api-dicionario-simples.herokuapp.com/Words', {
         method: "POST",
-        headers: { contentType: "application/json; charset=utf-8" },
+        headers: { 'Content-Type': 'application/json' },
         mode: "cors",
         body: JSON.stringify({
             word: termo,
@@ -18,11 +18,10 @@ insert.addEventListener("click", async function () {
             definitionText: text
         })
     });
-    let data = await json.json();
     if (json.status == 200) {
         document.querySelector('#erro').innerHTML = "Palavra adicionada com sucesso!";
     } else {
-        document.querySelector('#erro').innerHTML = data.error;
+        document.querySelector('#erro').innerHTML = "Erro ao adicionar a palavra!";
     }
     document.querySelector('#erro').classList.toggle('displaynone', false);
     logado();
