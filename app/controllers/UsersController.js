@@ -56,7 +56,7 @@ module.exports = {
                 senha: senha
             });
             console.log(reply);
-            const token = jwt.sign(reply, JWT_SECRET);
+            const token = jwt.sign({ email: email, senha: senha }, JWT_SECRET);
             console.log(token);
             res.status(200).json({ status: '200', data: token });
         } catch (err) {
