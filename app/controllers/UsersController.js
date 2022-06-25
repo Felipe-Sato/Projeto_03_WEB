@@ -38,9 +38,7 @@ module.exports = {
                 senha,
                 admin
             });
-            if (reply != null) {
-                res.status(200).json({ status: '200', data: token });
-            }
+            res.status(200).json({ status: '200' });
         } catch (err) {
             console.log(err);
             res.status(401).json({ status: '401', error: '401 Not Authenticaded' });
@@ -52,7 +50,7 @@ module.exports = {
         console.log(req.body);
 
         try {
-            // Create new User
+            // Search User
             const reply = await User.findOne({
                 email: email,
                 senha: senha
