@@ -1,14 +1,6 @@
 async function logado(){
     const token = localStorage.getItem("token");
     if(token != null) {
-        const json = await fetch('https://web-api-dicionario-simples.herokuapp.com/Users/', {
-            method: 'get',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                token: token
-            })
-        });
-        if(json.status == 200) {
             document.getElementById('btnlogoff').classList.remove('displaynone');
             document.getElementById('signup').classList.add('displaynone');
             document.getElementById('signin').classList.add('displaynone');
@@ -16,8 +8,6 @@ async function logado(){
             document.querySelector('.mainText').classList.toggle('displaynone', true);
             document.querySelector('.subtitle').classList.toggle('displaynone', true);
             document.querySelector('.search').classList.toggle('displaynone', false);
-        }
-
     } else {
 
         document.getElementById('signup').classList.remove('displaynone');

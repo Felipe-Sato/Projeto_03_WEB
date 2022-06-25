@@ -9,16 +9,16 @@ module.exports = {
 
         try {
             // Auth token
-            const { email } = await jwt.verify(token, JWT_SECRET);
+            const { email, senha } = jwt.verify(token, JWT_SECRET);
 
             // Search for user
-            const reply = await User.find({ email: email });
+            const reply = await User.find({ email: email, senha: senha });
 
-            if (reply === null) {
+            if (reply != null) {
+                res.status(200).json({ data: reply });
+            } else {
                 // Error treatment
                 res.status(404).json({ status: '404', error: 'User not found' });
-            } else {
-                res.status(200).json({ data: reply });
             }
         } catch (err) {
             res.status(401).json({ status: '401', error: '401 Not Authenticaded' });
