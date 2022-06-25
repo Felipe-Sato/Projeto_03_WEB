@@ -37,11 +37,8 @@ module.exports = {
                 email,
                 senha,
                 admin
-            }, function (err, reply) {
-                if (err) {
-                    res.status(400).json({ status: '400', error: '400 Not Created' });
-                }
             });
+            res.status(200).json({ status: '200 OK' });
         } catch (err) {
             console.log(err);
             res.status(401).json({ status: '401', error: '401 Not Authenticaded' });
