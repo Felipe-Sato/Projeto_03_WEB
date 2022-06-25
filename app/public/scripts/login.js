@@ -71,8 +71,6 @@ document.getElementById('signin2').addEventListener('click', async function (ema
         });
         let data = await json.json();
         if (json.status == 200) {
-            console.log(data.data);
-            console.log(data.token);
             localStorage.setItem('token', data.token);
         } else {
             document.getElementById('erro').innerHTML = "Erro na consulta a API";

@@ -5,15 +5,14 @@ const JWT_SECRET = 'as34a';
 module.exports = {
     get: async (req, res) => {
         const { token } = req.query;
-        const { email } = req.query;
         console.log('User Controller GET');
 
         try {
             // Auth token
-            //jwt.verify(token, JWT_SECRET);
+            const { email } = await jwt.verify(token, JWT_SECRET);
 
             // Search for user
-            const reply = await User.find({ email: email});
+            const reply = await User.find({ email: email });
 
             if (reply === null) {
                 // Error treatment
