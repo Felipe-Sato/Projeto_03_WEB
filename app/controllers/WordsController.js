@@ -4,40 +4,35 @@ const JWT_SECRET = 'as34a';
 
 module.exports = {
     get: async (req, res) => {
-        const { token } = req.query;
         const { word } = req.query;
         console.log('Word Controller GET');
 
         try {
-            if(token!= null) {
-                // Auth token
-                jwt.verify(token, JWT_SECRET);
-                // Search for word
-                const reply = await Word.find({ word: word });
-
-                // Error treatment
-                
+            // Search engine by Word
+            const reply = await Word.find({ word: word });
+            // Error treatment
+            if (reply != null) {
+                console.log(reply);
+                res.status(200).json({ status: '200', data: reply});
+            } else {
+                res.status(404).json({ status: '404', error: '404 Word Not Found' });
             }
         } catch (err) {
             res.status(401).json({ status: '401', error: '401 Not Authenticaded' });
         }
     },
     post: async (req, res) => {
-        const { token } = req.query;
         const { word, definitionType, definitionText } = req.body;
         console.log('Word Controller POST');
 
         try {
-            // Auth token
-            jwt.verify(token, JWT_SECRET);
-
             // Create new Word
-            const reply = await Word.createElement({
+            const reply = await Word.create({
                 word: word,
                 definitionType: definitionType,
                 definitionText: definitionText
             });
-            res.status(200).json({ status: '200 OK' });
+            res.status(200).json({ status: '200' });
         } catch (err) {
             res.status(401).json({ status: '401', error: '401 Not Authenticaded' });
         }

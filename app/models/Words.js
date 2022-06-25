@@ -19,7 +19,7 @@ const wordSchema = new mongoose.Schema({
     definitionText : {
         type : 'string',
         required : true,
-        maxLength :255,
+        maxLength :511,
         minLength :1
     }
 });
