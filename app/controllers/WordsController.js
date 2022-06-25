@@ -36,12 +36,8 @@ module.exports = {
                 word: word,
                 definitionType: definitionType,
                 definitionText: definitionText
-            }, function (err, reply) {
-                if (err) {
-                    res.status(400); // Not created
-                    throw err;
-                }
             });
+            res.status(200).json({ status: '200 OK' });
         } catch (err) {
             res.status(401).json({ status: '401', error: '401 Not Authenticaded' });
         }

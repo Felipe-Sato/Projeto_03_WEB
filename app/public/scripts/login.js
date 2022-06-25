@@ -61,7 +61,7 @@ document.getElementById('signin2').addEventListener('click', async function (ema
     emailinput = document.getElementById('user_email');
     pswinput = document.getElementById('user_password');
     if (verificaEmail(emailinput) && verificaSenha(pswinput)) {
-        const json = await fetch('https://web-api-dicionario-simples.herokuapp.com/Users', {
+        const json = await fetch('https://web-api-dicionario-simples.herokuapp.com/Users/login', {
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
