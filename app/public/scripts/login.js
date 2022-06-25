@@ -39,7 +39,7 @@ document.getElementById('signup2').addEventListener('click',  async function (no
         const json = await fetch('https://web-api-dicionario-simples.herokuapp.com/Users', {
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
-            mode: 'no-cors',
+            mode: 'cors',
             body: JSON.stringify({
                 nome: nomeinput.value,
                 email: emailinput.value,

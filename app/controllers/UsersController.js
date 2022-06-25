@@ -44,10 +44,12 @@ module.exports = {
             }, function (err, reply) {
                 if (err) {
                     res.status(400); // Not created
+                    console.log(err);
                     throw err;
                 }
             });
         } catch (err) {
+            console.log(err);
             res.status(401).json({ status: '401', error: '401 Not Authenticaded' });
         }
     }

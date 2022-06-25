@@ -25,10 +25,7 @@ mongoose.connect(process.env.DB_CONNECT,
 );
 
 // Node.js Middleware
-app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(cookieParser());
 app.use(express.static('./public'));
 app.use(morgan('tiny'));
 app.use(cors());
