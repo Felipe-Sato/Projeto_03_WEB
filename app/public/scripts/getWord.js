@@ -10,22 +10,23 @@ search.addEventListener("click", async function () {
     // Implementação da consulta AJAX com API Fetch e Async e Await
     let obj = await fetch('https://web-api-dicionario-simples.herokuapp.com/Words/'+ termo).json();
     if (obj.status === 200) {
+        console.log(obj);
         /* ====== Estruturas da resposta ====== */
         // Word
         var word = document.createElement("p");
         word.className = "word";
-        word.innerHTML = obj[0].word;
+        word.innerHTML = obj.data[0].word;
         response.appendChild(word);
 
         // Definitions
         var definitions = document.createElement("ol");
-        for (var i = 1; i < obj.length; i++) {
+        for (var i = 1; i < obj.data.length; i++) {
             // definitionType
             var definitionType = document.createElement("li");
-            definitionType = obj[i].definitionType;
+            definitionType = obj.data[i].definitionType;
             // definitionText
             var definitionText = document.createElement("p");
-            definitionText = obj[i].definitionText;
+            definitionText = obj.data[i].definitionText;
             definitionType.appendChild(definitionText);
             definitions.appendChild(definitionType);
         }
