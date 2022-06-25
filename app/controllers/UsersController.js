@@ -4,7 +4,7 @@ const JWT_SECRET = 'as34a';
 
 module.exports = {
     get: async (req, res) => {
-        //const { token } = req.query;
+        const { token } = req.query;
         const { email } = req.query;
         console.log('User Controller GET');
 
@@ -13,15 +13,14 @@ module.exports = {
             //jwt.verify(token, JWT_SECRET);
 
             // Search for user
-            const reply = await User.find({ });
+            const reply = await User.find({ email: email});
 
-            // Error treatment
-            /*if (reply.length === 0) {
-                res.status(404).json({ status: '404', error: '404 Not Found' });
+            if (reply === null) {
+                // Error treatment
+                res.status(404).json({ status: '404', error: 'User not found' });
             } else {
-                res.status(200).json({ status: '200', data: reply });
-            }*/
-            res.status(200).json({ data: reply });
+                res.status(200).json({ data: reply });
+            }
         } catch (err) {
             res.status(401).json({ status: '401', error: '401 Not Authenticaded' });
         }
@@ -32,9 +31,6 @@ module.exports = {
         console.log(req.body);
 
         try {
-            // Auth token
-            // jwt.verify(token, JWT_SECRET);
-
             // Create new User
             const reply = await User.create({
                 nome,
@@ -43,9 +39,7 @@ module.exports = {
                 admin
             }, function (err, reply) {
                 if (err) {
-                    res.status(400); // Not created
-                    console.log(err);
-                    throw err;
+                    res.status(400).json({ status: '400', error: '400 Not Created' });
                 }
             });
         } catch (err) {

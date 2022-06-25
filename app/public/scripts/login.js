@@ -49,8 +49,10 @@ document.getElementById('signup2').addEventListener('click',  async function (no
         });
         if (!json.ok) {
             document.getElementById('erro').innerHTML = "Erro na consulta a API";
-            document.getElementById('erro').classList.toggle('displaynone', false);
+        } else {
+            document.getElementById('erro').innerHTML = "Usuario cadastrado com sucesso";
         }
+        document.getElementById('erro').classList.toggle('displaynone', false);
     }
 
 })
