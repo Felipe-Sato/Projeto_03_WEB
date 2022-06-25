@@ -5,7 +5,7 @@ var router = express.Router();
 
 // Classe para o roteamento das requisicoes de Usuarios
 console.log('App User Router');
-router.get('/Users', Users.get);
-router.post('/Users', Users.post);
+router.get('/', Users.get);
+router.post('/', Users.post);
 
 module.exports = router;
