@@ -58,7 +58,7 @@ module.exports = {
             if (reply != null) {
                 const token = jwt.sign({ email: email, senha: senha }, JWT_SECRET);
                 console.log(token);
-                res.status(200).json({ status: '200', data: token });
+                res.status(200).json({ status: '200', token: token });
             } else {
                 res.status(404).json({ status: '404', error: '404 User Not Found' });
             }
