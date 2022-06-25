@@ -29,6 +29,7 @@ module.exports = {
         const { token } = req.query;
         const { nome, email, senha, admin } = req.body;
         console.log('User Controller POST');
+        console.log(req.body);
 
         try {
             // Auth token
