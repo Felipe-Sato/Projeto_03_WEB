@@ -4,7 +4,7 @@ const JWT_SECRET = 'as34a';
 
 module.exports = {
     get: async (req, res) => {
-        const { word } = req.query;
+        const { word } = req.params;
         console.log('Word Controller GET');
 
         try {
