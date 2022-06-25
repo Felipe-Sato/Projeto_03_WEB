@@ -25,9 +25,9 @@ module.exports = {
             res.status(401).json({ status: '401', error: '401 Not Authenticaded' });
         }
     },
-    post: async (req, res) => {
+    signup: async (req, res) => {
         const { nome, email, senha, admin } = req.body;
-        console.log('User Controller POST');
+        console.log('User Controller SIGNUP');
         console.log(req.body);
 
         try {
@@ -37,6 +37,24 @@ module.exports = {
                 email,
                 senha,
                 admin
+            });
+            console.log(reply);
+            res.status(200).json({ status: '200 OK' });
+        } catch (err) {
+            console.log(err);
+            res.status(401).json({ status: '401', error: '401 Not Authenticaded' });
+        }
+    },
+    signin: async (req, res) => {
+        const { email, senha } = req.body;
+        console.log('User Controller SIGNIN');
+        console.log(req.body);
+
+        try {
+            // Create new User
+            const reply = await User.findOne({
+                email,
+                senha
             });
             res.status(200).json({ status: '200 OK' });
         } catch (err) {
