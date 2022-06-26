@@ -3,8 +3,8 @@ const jwt = require('jsonwebtoken');
 const JWT_SECRET = 'as34a';
 
 module.exports = {
-    getWord: async (req, res) => {
-        const { word } = req.query.Word;
+    get: async (req, res) => {
+        const word = req.query.Word;
         console.log('Word Controller GET');
         console.log(word);
 
@@ -22,7 +22,7 @@ module.exports = {
             res.status(401).json({ status: '401', error: '401 Not Authenticaded' });
         }
     },
-    setWord: async (req, res) => {
+    post: async (req, res) => {
         const { word, definitionType, definitionText } = req.body;
         console.log('Word Controller POST');
 

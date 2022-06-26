@@ -5,7 +5,7 @@ var router = express.Router();
 
 // Classe para o roteamento das requisicoes de Palavras
 console.log('App Word Router');
-router.post('/get', Words.getWord);
-router.post('/set', Words.setWord);
+router.get('/get:word', Words.get);
+router.post('/set', Words.post);
 
 module.exports = router;
