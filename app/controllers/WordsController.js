@@ -9,7 +9,7 @@ module.exports = {
 
         try {
             // Search engine by Word
-            const reply = Word.find({ word: word });
+            const reply = await Word.find({ word: word });
             // Error treatment
             if (reply != null) {
                 console.log(reply);
