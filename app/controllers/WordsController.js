@@ -6,6 +6,7 @@ module.exports = {
     get: async (req, res) => {
         const { word } = req.params.word;
         console.log('Word Controller GET');
+        console.log(word);
 
         try {
             // Search engine by Word
