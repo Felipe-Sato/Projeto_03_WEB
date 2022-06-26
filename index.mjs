@@ -10,6 +10,7 @@ import { fileURLToPath } from 'url'
 
 import UserRouter from './app/routes/UserRouter.js';
 import WordRouter from './app/routes/WordRouter.js';
+import UploadRouter from './app/routes/ArchRouter.js';
 
 var app = express();
 const __filename = fileURLToPath(import.meta.url);
@@ -18,8 +19,8 @@ const __dirname = path.dirname(__filename);
 dotenv.config();
 
 //Conectar ao Banco de Dados
-mongoose.connect(process.env.DB_CONNECT, 
-    { useNewUrlParser: true, useUnifiedTopology: true },() => {
+mongoose.connect(process.env.DB_CONNECT,
+    { useNewUrlParser: true, useUnifiedTopology: true }, () => {
         console.log('Connection established on MongoDB Cloud');
     }
 );
@@ -33,6 +34,7 @@ app.use(cors());
 console.log('App INDEX.mjs');
 app.use('/Users', UserRouter);
 app.use('/Words', WordRouter);
+app.user('/Upload', UploadRouter);
 
 const PORT = process.env.PORT || 3000;
 http.createServer(app).listen(PORT);

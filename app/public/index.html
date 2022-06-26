@@ -1,107 +1,125 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="stylesheet" type="text/css" href="styles/main.css"/>
-        <title>GitHub: Where the world builds software · GitHub</title>
-        <link rel="shortcut icon" type="imagex/png" href="source/GitHub_icon.png">
-        <script type="text/javascript"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        
-        <img src="source/glowLeft.png" id="glowLeft">
-        <img src="source/glowRight.png" id="glowRight">
-        
-        <div class="foreground">
-            <img src="source/globo.png" id="backglobe">
-            <header class="cabeçalho">
-                <div class="topmenuleft">
-                    <div class="topmenulogo">
-                        <a href="index.html"><img src="source/GitHub_icon.png" alt="icone"></a>
-                    </div>
-                    <div class="menuitem">
-                        <div class="menuitemHover1"><p>Product &#709;</p></div>
-                        <div class="menuitemStatic"><p>Team</p></div>
-                        <div class="menuitemStatic"><p>Enterprise</p></div>
-                        <div class="menuitemHover2"><p>Explore &#709;</p></div>
-                        <div class="menuitemStatic"><p>Marketplace</p></div>
-                        <div class="menuitemHover3"><p>Pricing &#709;</p></div>
-                    </div>
-                </div>
 
-                <div class="blankspace"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="styles/main.css" />
+    <title>GitHub: Where the world builds software · GitHub</title>
+    <link rel="shortcut icon" type="imagex/png" href="source/GitHub_icon.png">
+    <script type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-                <div class="topmenuright">
-                    <img src="source/icons8-hamburger.svg" class="hamburger">
-                    <a id="signup">Sign up</a>
-                    <a id="signin">Sign in</a>
-                    <form>
-                        <input class="searchbox" placeholder="Search Github" type="text" id="search_files" name="search_files">
-                    </form>
-                    
-                </div>
-            </header> 
-                
-            <div class="wrapper">
-                <div class="text">
-                    <h1 class="mainText">Where the world builds software</h1>
-                    <p class="subtitle">Millions of developers and companies build, ship, and maintain their software on GitHub—the largest and most advanced development platform in the world. Click on Sign In to start exploring!</p>
-                </div>
+<body>
 
-                <!-- Login Form -->
-                <button id="btnlogoff" class="btnlogoff displaynone">Voce esta logado, clique para fazer logoff</button>
-                <div id="signupbox"class="signupbox displaynone">
-                    <div class="email-header">
-                        <button type="button" id="btn-form-signup" class="btn-login">Sign Up</button>
-                        <button type="button" id="btn-form-signin" class="btn-login">Sign In</button>
+    <img src="source/glowLeft.png" id="glowLeft">
+    <img src="source/glowRight.png" id="glowRight">
+
+    <div class="foreground">
+        <img src="source/globo.png" id="backglobe">
+        <header class="cabeçalho">
+            <div class="topmenuleft">
+                <div class="topmenulogo">
+                    <a href="index.html"><img src="source/GitHub_icon.png" alt="icone"></a>
+                </div>
+                <div class="menuitem">
+                    <div class="menuitemHover1">
+                        <p>Product &#709;</p>
                     </div>
-                    <form class="emailbox">
-                        <input class="emailinput displaynone" placeholder="Username"   
-                                type="text"        
-                                id="user_name"     
-                                name="user_name"/>
-                        <input class="emailinput" placeholder="Email address"   
-                                type="email"        
-                                id="user_email"     
-                                name="user_email"/>
-                        <input class="senhainput" placeholder="Password"        
-                                type="password"     
-                                id="user_password"  
-                                name="user_senha"/>
-                        <p id="erro"class="erro displaynone"></p>
-                    </form>
-                    <button id="signup2" class="signup2">Sign up for GitHub</button>
-                    <button id="signin2" class="signup2">Sign in Account</button>
-                </div>
-
-                <!-- Search Form -->
-                <div class="search displaynone">
-                    <div class="search-content">
-                        <div class="search-header">
-                            <button class="form_btn" id="btn-form-search">Buscar</button>
-                            <button class="form_btn" id="btn-form-insert">Adicionar</button>
-                        </div>
-                        <div class="search_field">
-                            <input class="search_field" name="Word" type="text" id="termo" placeholder="Palavra"/>
-                            <input class="search_field displaynone" name="Type" type="text" id="type" placeholder="Tipo"/>
-                            <input class="search_field displaynone" name="Text" type="text" id="text" placeholder="Definição"/>
-                        </div>
-                        <div class="search_button">
-                            <button class="form_btn" id="search">Buscar</button>
-                            <button class="form_btn displaynone" id="insert">Inserir</button>
-                            <button class="form_btn" id="reset">Limpar</button>
-                        </div>
+                    <div class="menuitemStatic">
+                        <p>Team</p>
                     </div>
-                    <div class="response">
+                    <div class="menuitemStatic">
+                        <p>Enterprise</p>
+                    </div>
+                    <div class="menuitemHover2">
+                        <p>Explore &#709;</p>
+                    </div>
+                    <div class="menuitemStatic">
+                        <p>Marketplace</p>
+                    </div>
+                    <div class="menuitemHover3">
+                        <p>Pricing &#709;</p>
                     </div>
                 </div>
             </div>
+
+            <div class="blankspace"></div>
+
+            <div class="topmenuright">
+                <img src="source/icons8-hamburger.svg" class="hamburger">
+                <a id="signup">Sign up</a>
+                <a id="signin">Sign in</a>
+                <form>
+                    <input class="searchbox" placeholder="Search Github" type="text" id="search_files"
+                        name="search_files">
+                </form>
+
+            </div>
+        </header>
+
+        <div class="wrapper">
+            <div class="text">
+                <h1 class="mainText">Where the world builds software</h1>
+                <p class="subtitle">Millions of developers and companies build, ship, and maintain their software on
+                    GitHub—the largest and most advanced development platform in the world. Click on Sign In to start
+                    exploring!</p>
+            </div>
+
+            <!-- Login Form -->
+            <button id="btnlogoff" class="btnlogoff displaynone">Voce esta logado, clique para fazer logoff</button>
+            <div id="signupbox" class="signupbox displaynone">
+                <div class="email-header">
+                    <button type="button" id="btn-form-signup" class="btn-login">Sign Up</button>
+                    <button type="button" id="btn-form-signin" class="btn-login">Sign In</button>
+                </div>
+                <form class="emailbox">
+                    <input class="emailinput displaynone" placeholder="Username" type="text" id="user_name"
+                        name="user_name" />
+                    <input class="emailinput" placeholder="Email address" type="email" id="user_email"
+                        name="user_email" />
+                    <input class="senhainput" placeholder="Password" type="password" id="user_password"
+                        name="user_senha" />
+                    <p id="erro" class="erro displaynone"></p>
+                </form>
+                <button id="signup2" class="signup2">Sign up for GitHub</button>
+                <button id="signin2" class="signup2">Sign in Account</button>
+            </div>
+
+            <!-- Search Form -->
+            <div class="search displaynone">
+                <div class="search-content">
+                    <div class="search-header">
+                        <button class="form_btn" id="btn-form-search">Buscar</button>
+                        <button class="form_btn" id="btn-form-insert">Adicionar</button>
+                        <button class="form_btn" id="btn-form-upload">Upload</button>
+
+                    </div>
+                    <div class="search_field">
+                        <input class="search_field" name="Word" type="text" id="termo" placeholder="Palavra" />
+                        <input class="search_field displaynone" name="Type" type="text" id="type" placeholder="Tipo" />
+                        <input class="search_field displaynone" name="Text" type="text" id="text"
+                            placeholder="Definição" />
+                        <input class="upload_field displaynone" type="file" id="file" accept=".doc,.txt,.png,.jpg,.pdf">
+                    </div>
+                    <div class="search_button">
+                        <button class="form_btn" id="search">Buscar</button>
+                        <button class="form_btn displaynone" id="insert">Inserir</button>
+                        <button class="form_btn" id="reset">Limpar</button>
+                        <button class="form_btn" id="upload">Upload</button>
+                    </div>
+                </div>
+                <div class="response">
+                </div>
+            </div>
         </div>
-        <script src="scripts/control.js"></script>
-        <script src="scripts/login.js"></script>
-        <script src="scripts/getWord.js"></script>
-        <script src="scripts/setWord.js"></script>
-    </body>
+    </div>
+    <script src="scripts/control.js"></script>
+    <script src="scripts/login.js"></script>
+    <script src="scripts/getWord.js"></script>
+    <script src="scripts/setWord.js"></script>
+    <script src="scripts/upload.js"></script>
+</body>
+
 </html>
