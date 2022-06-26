@@ -3,13 +3,13 @@ const Archive = require('../models/Archive');
 module.exports = {
   upload: async (req, res) => {
     console.log(req.body);
-    const { File } = req.body;
+    const { file } = req.body;
     console.log('File Controller Upload');
-    console.log(File);
+    console.log(file);
     try {
 
       const reply = await Archive.create({
-        File
+        file
       });
       res.status(200).json({ status: '200' });
 

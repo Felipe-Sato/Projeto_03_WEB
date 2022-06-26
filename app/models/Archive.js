@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const archSchema = new mongoose.Schema({
-  File: {
+  file: {
     type: String,
     required: true,
     unique: true

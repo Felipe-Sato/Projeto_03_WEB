@@ -7,7 +7,7 @@ upload.addEventListener("click", async function () {
     headers: { 'Content-Type': 'application/json' },
     mode: "cors",
     body: JSON.stringify({
-      File: file
+      file: file
     })
   });
   if (json.status == 200) {
