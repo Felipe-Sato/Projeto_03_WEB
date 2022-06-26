@@ -9,9 +9,9 @@ search.addEventListener("click", async function () {
 
     // Implementação da consulta AJAX com API Fetch e Async e Await
     let reply = await fetch('https://web-api-dicionario-simples.herokuapp.com/Words/get'+ termo);
-    let obj = reply.json();
-    if (obj.status === 200) {
-        console.log(obj);
+    let obj = await reply.json();
+    console.log(obj);
+    if (obj.status == 200) {
         /* ====== Estruturas da resposta ====== */
         // Word
         var word = document.createElement("p");
@@ -21,19 +21,19 @@ search.addEventListener("click", async function () {
 
         // Definitions
         var definitions = document.createElement("ol");
-        for (var i = 1; i < obj.data.length; i++) {
+        for (var i = 0; i < obj.data.length; i++) {
             // definitionType
-            var definitionType = document.createElement("li");
-            definitionType = obj.data[i].definitionType;
+            var type = document.createElement("li");
+            type.innerHTML = obj.data[i].definitionType;
             // definitionText
-            var definitionText = document.createElement("p");
-            definitionText = obj.data[i].definitionText;
-            definitionType.appendChild(definitionText);
-            definitions.appendChild(definitionType);
+            var text = document.createElement("p");
+            text.innerHTML = obj.data[i].definitionText;
+            type.appendChild(text);
+            definitions.appendChild(type);
         }
         response.appendChild(definitions);
     } else {
-        document.querySelector('#erro').innerHTML = obj.data[0].error;
+        document.querySelector('#erro').innerHTML = "404 Word not found";
         document.querySelector('#erro').classList.toggle('displaynone', false);
     }
 });
