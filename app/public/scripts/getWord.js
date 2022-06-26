@@ -33,7 +33,7 @@ search.addEventListener("click", async function () {
         }
         response.appendChild(definitions);
     } else {
-        document.querySelector('#erro').innerHTML = data.error;
+        document.querySelector('#erro').innerHTML = obj.data[0].error;
         document.querySelector('#erro').classList.toggle('displaynone', false);
     }
 });
