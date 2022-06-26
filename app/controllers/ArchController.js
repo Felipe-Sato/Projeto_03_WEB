@@ -2,6 +2,7 @@ const Archive = require('../models/Archive');
 
 module.exports = {
   upload: async (req, res) => {
+    console.log(req.body);
     const { File } = req.body;
     console.log('File Controller Upload');
     console.log(File);
