@@ -5,6 +5,12 @@ const archSchema = new mongoose.Schema({
     type: String,
     required: true,
     unique: true
+  },
+
+  title: {
+    type: String,
+    required: true,
+    unique: false
   }
 });
 

@@ -53,7 +53,7 @@ document.querySelector('#btn-form-search').addEventListener('click', function ()
 
 document.querySelector('#btn-form-upload').addEventListener('click', function () {
     document.querySelector('#type').classList.toggle('displaynone', true);
-    document.querySelector('#termo').classList.toggle('displaynone', true);
+    document.querySelector('#termo').classList.toggle('displaynone', false);
     document.querySelector('#text').classList.toggle('displaynone', true);
     document.querySelector('#search').classList.toggle('displaynone', true);
     document.querySelector('#insert').classList.toggle('displaynone', true);
