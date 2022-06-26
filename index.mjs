@@ -34,7 +34,7 @@ app.use(cors());
 console.log('App INDEX.mjs');
 app.use('/Users', UserRouter);
 app.use('/Words', WordRouter);
-app.user('/Upload', UploadRouter);
+app.use('/Upload', UploadRouter);
 
 const PORT = process.env.PORT || 3000;
 http.createServer(app).listen(PORT);
