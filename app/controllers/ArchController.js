@@ -4,7 +4,7 @@ module.exports = {
   upload: async (req, res) => {
     const { File } = req.body;
     console.log('File Controller Upload');
-
+    console.log(File);
     try {
 
       const reply = await Archive.create({
