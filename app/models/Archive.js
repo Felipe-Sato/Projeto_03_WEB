@@ -2,13 +2,13 @@ const mongoose = require('mongoose');
 
 const archSchema = new mongoose.Schema({
   file: {
-    type: String,
+    type: 'string',
     required: true,
     unique: true
   },
 
   title: {
-    type: String,
+    type: 'string',
     required: true,
     unique: false
   }
