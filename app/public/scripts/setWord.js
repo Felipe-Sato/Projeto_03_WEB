@@ -8,7 +8,7 @@ insert.addEventListener("click", async function () {
         text = document.querySelector("#text").value;
 
     // Implementação da consulta AJAX com API Fetch e Async e Await
-    const json = await fetch('https://web-api-dicionario-simples.herokuapp.com/Words', {
+    const json = await fetch('https://web-api-dicionario-simples.herokuapp.com/Words/set', {
         method: "POST",
         headers: { 'Content-Type': 'application/json' },
         mode: "cors",
