@@ -15,12 +15,10 @@ module.exports = {
 
             // Search for user
             const reply = await User.find({ email: email });
-
             if (reply != null) {
-                res.status(200);
+                res.status(200).json({ status: '200', token: token });
             } else {
-                // Error treatment
-                res.status(404).json({ status: '404', error: 'User not found' });
+                res.status(404).json({ status: '404', error: '404 User Not Found' });
             }
         } catch (err) {
             res.status(401).json({ status: '401', error: '401 Not Authenticaded' });
