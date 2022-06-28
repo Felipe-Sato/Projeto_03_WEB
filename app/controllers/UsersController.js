@@ -6,6 +6,7 @@ module.exports = {
     get: async (req, res) => {
         const token = req.params.Token;
         console.log('User Controller GET');
+        console.log(token);
 
         try {
             // Auth token
