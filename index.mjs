@@ -27,7 +27,7 @@ mongoose.connect(process.env.DB_CONNECT,
 
 // Node.js Middleware
 app.use(express.json());
-app.use(express.static('./public'));
+app.use(express.static('./app/public'));
 app.use(morgan('tiny'));
 app.use(cors());
 
@@ -35,7 +35,6 @@ console.log('App INDEX.mjs');
 app.use('/Users', UserRouter);
 app.use('/Words', WordRouter);
 app.use('/Upload', UploadRouter);
-app.get('/', app.render("./app/views/undex.hbs"));
 
 const PORT = process.env.PORT || 3000;
 http.createServer(app).listen(PORT);
