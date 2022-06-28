@@ -4,18 +4,18 @@ const JWT_SECRET = 'as34a';
 
 module.exports = {
     get: async (req, res) => {
-        const { token } = req.query;
+        const token = req.params.Token;
         console.log('User Controller GET');
 
         try {
             // Auth token
-            const { email, senha } = jwt.verify(token, JWT_SECRET);
+            const { email } = jwt.verify(token, JWT_SECRET);
 
             // Search for user
-            const reply = await User.find({ email: email, senha: senha });
+            const reply = await User.find({ email: email });
 
             if (reply != null) {
-                res.status(200).json({ data: reply });
+                res.status(200);
             } else {
                 // Error treatment
                 res.status(404).json({ status: '404', error: 'User not found' });
@@ -55,7 +55,7 @@ module.exports = {
             const reply = await User.find({ email: email, senha: senha });
             console.log(reply);
             if (reply != null) {
-                const token = jwt.sign({ email: email, senha: senha }, JWT_SECRET);
+                const token = jwt.sign({ email: email }, JWT_SECRET);
                 console.log(token);
                 res.status(200).json({ status: '200', token: token });
             } else {
