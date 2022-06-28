@@ -35,7 +35,7 @@ console.log('App INDEX.mjs');
 app.use('/Users', UserRouter);
 app.use('/Words', WordRouter);
 app.use('/Upload', UploadRouter);
-app.get('/', res.render("./app/views/undex.hbs"));
+app.get('/', app.render("./app/views/undex.hbs"));
 
 const PORT = process.env.PORT || 3000;
 http.createServer(app).listen(PORT);
