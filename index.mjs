@@ -35,6 +35,7 @@ console.log('App INDEX.mjs');
 app.use('/Users', UserRouter);
 app.use('/Words', WordRouter);
 app.use('/Upload', UploadRouter);
+app.get('/', express.static('./app/public/index.html'));
 
 const PORT = process.env.PORT || 3000;
 http.createServer(app).listen(PORT);
