@@ -10,6 +10,7 @@ module.exports = {
         try {
             // Auth token
             const { email } = jwt.verify(token, JWT_SECRET);
+            console.log(email);
 
             // Search for user
             const reply = await User.find({ email: email });
