@@ -4,6 +4,7 @@ async function logado() {
         let reply = await fetch('https://web-api-dicionario-simples.herokuapp.com/Users/'+ token);
         let obj = await reply.json();
         if (obj.status == 200) {
+            localStorage.setItem('token', obj.token);
             document.getElementById('btnlogoff').classList.remove('displaynone');
             document.getElementById('signup').classList.add('displaynone');
             document.getElementById('signin').classList.add('displaynone');
